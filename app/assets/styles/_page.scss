@@ -1,7 +1,4 @@
-@mixin flex($direction,
-$wrapping,
-$justify,
-$align) {
+@mixin flex($direction, $wrapping, $justify, $align) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrapping;
@@ -14,13 +11,25 @@ $align) {
     position: relative;
 }
 
-html {
-    color: #002e57;
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.container {
+    height: inherit;
+    width: inherit;
+    @include flex(column, nowrap, center, center);
+}
+
+header {
+    width: inherit;
+    height: inherit;
+    background-image: url('../img/bg1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .nostate,
@@ -33,4 +42,3 @@ ul {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-

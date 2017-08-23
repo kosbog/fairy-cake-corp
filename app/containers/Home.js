@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import MoreItem from './MoreItem';
-import NoState from './NoState';
+import MoreItem from '../components/NoMatchRoute';
+import NoState from '../components/NoState';
+import Header from '../components/Header';
 import { connect } from 'react-redux';
 import store from '../services/store';
 import { } from '../utils/utils'
@@ -20,14 +21,14 @@ class Home extends Component {
     render() {
         const state = this.props.state;
 
-        if (state.length === 0) {
-            return (
-                <NoState />
-            )
-        }
+        // if (state.length === 0) {
+        //     return (
+        //         <NoState />
+        //     )
+        // }
         return (
             <div className="container">
-                Home
+                <Header />
             </div>
 
         )

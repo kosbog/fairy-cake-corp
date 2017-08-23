@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Home from '../containers/Home';
-import NoMatchRoute from './NoMatchRoute';
+import NoMatchRoute from '../components/NoMatchRoute';
 import store from '../services/store';
 
 
