@@ -12,10 +12,13 @@
 }
 
 html,
-body,
-#app {
+body {
     width: 100%;
     height: 100%;
+}
+
+#app {
+    width: 100%;
 }
 
 .container {
@@ -24,14 +27,101 @@ body,
     @include flex(column, nowrap, center, center);
 }
 
+// Header
+// 
 header {
     width: inherit;
-    height: inherit;
+    height: 570px;
     background-image: url('../img/bg1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 75%;
+    text-align: center;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url('../img/after.png');
+        width: 100%;
+        height: 100px;
+        background-position: center;
+        background-size: cover;
+        bottom: -56px;
+        z-index: 1;
+    }
 }
 
+.header-title {
+    top: 100px;
+    font-size: 84px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    @include flex(row,
+    nowrap,
+    space-around,
+    baseline);
+    color: #fff;
+    background-color: rgba(86, 83, 76, .53);
+    font-size: 14px;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1280px;
+    @include flex(row,
+    nowrap,
+    space-around,
+    center);
+    &-menu {
+        width: calc(100%/2);
+    }
+    &-socials,
+    &-logo {
+        width: calc(100%/4);
+    }
+    &-list {
+        @include flex(row,
+        nowrap,
+        space-around,
+        baseline);
+    }
+    .social-list {
+        justify-content: center;
+        li {
+            margin: 0 10px;
+        }
+    }
+    .social {
+        display: block;
+        background-size: 100%;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+    }
+    .fb {
+        background-image: url("../img/facebook32.png");
+    }
+    .google {
+        background-image: url("../img/googleplus32.png");
+    }
+    .inst {
+        background-image: url("../img/instagram32.png");
+    }
+}
+
+// About
+// 
+.about {
+    background-image: url("../img/bg-structure.png");
+    background-size: 100%;
+}
+
+// Nostate, Nomatch
+// 
 .nostate,
 .nomatch {
     width: 100%;
