@@ -34,7 +34,7 @@ header {
     height: 570px;
     background-image: url('../img/bg1.jpg');
     background-size: cover;
-    background-position: center 75%;
+    background-position: center;
     text-align: center;
     &:after {
         content: '';
@@ -44,7 +44,7 @@ header {
         width: 100%;
         height: 100px;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         bottom: -56px;
         z-index: 1;
     }
@@ -52,7 +52,7 @@ header {
 
 .header-title {
     top: 100px;
-    font-size: 84px;
+    font-size: 90px;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
 }
@@ -116,8 +116,128 @@ nav {
 // About
 // 
 .about {
-    background-image: url("../img/bg-structure.png");
+    background-image: url("../img/texture.jpg");
     background-size: 100%;
+    width: 100%;
+    padding: 80px 0;
+    color: #56534c;
+    box-shadow: inset 0px 10px 10px -10px #56534c;
+    border-top: 9px solid #fff;
+    font-family: 'Noto Serif', serif;
+    
+    @include flex(row,
+    nowrap,
+    space-around,
+    baseline);
+    &-wrapper {
+        width: 100%;
+        max-width: 1280px;
+        @include flex(row,
+        nowrap,
+        space-around,
+        center);
+    }
+    &-info,
+    &-image {
+        width: 50%;
+        @include flex(column,
+        nowrap,
+        space-around,
+        center);
+    }
+    &-info {
+        padding: 0 50px;
+    }
+    &-headers {
+        text-align: center;
+        &-title {
+            font-size: 46px;
+            margin: 10px 0;
+            font-stretch: normal;
+        }
+        &-subtitle {
+            font-size: 16px;
+            color: #a47d5e;
+            text-transform: uppercase;
+            font-family: 'PT Serif', serif;
+            letter-spacing: 1px;
+        }
+    }
+    &-text {
+        font-size: 15px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        line-height: 25px;
+        text-align: center;
+    }
+    &-chef {
+        text-align: center;
+        &-title,
+        &-name {
+            font-size: 24px;
+        }
+        &-title {
+            padding-bottom: 35px;
+        }
+        &-name {
+            font-family: 'Playfair Display', serif;            
+            @include flex(row,
+            nowrap,
+            space-around,
+            center);
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #000;
+                margin: 0 35px;
+            }
+
+            span {
+                width: 110px;
+                padding: 15px 0;
+                border-top: 1px solid #d7d5ca;
+                border-bottom: 1px solid #d7d5ca;
+            }
+        }
+    }
+    &-image {
+        @include flex(row,
+        wrap,
+        space-around,
+        center);
+        img {
+            width: 290px;
+            height: 245px;
+            background-color: #000;
+            margin: 15px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 9px;
+                left: 9px;
+                width: calc(100% - 18px);
+                height: calc(100% - 18px);
+                background-color: transparent;
+                border: 4px solid #fff;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/center-label.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: .97;
+        }
+    }
 }
 
 // Nostate, Nomatch
