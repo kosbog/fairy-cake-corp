@@ -3,6 +3,7 @@ import MoreItem from '../components/NoMatchRoute';
 import NoState from '../components/NoState';
 import Header from '../components/Header';
 import About from '../components/About';
+import Products from '../containers/Products';
 import { connect } from 'react-redux';
 import store from '../services/store';
 import { } from '../utils/utils'
@@ -31,6 +32,7 @@ class Home extends Component {
             <div className="container">
                 <Header />
                 <About />
+                <Products />
             </div>
 
         )
