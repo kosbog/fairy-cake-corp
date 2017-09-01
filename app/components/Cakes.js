@@ -4,7 +4,9 @@ const Cakes = () => {
     return (
         <div className="cakes">
             <div className="cakes-wrapper">
-                <div className="cakes-image"></div>
+                <div className="cakes-image">
+                    <img src="../assets/img/cakes.jpg" alt="" />
+                </div>
                 <div className="cakes-info">
                     <div className="cakes-headers">
                         <h2 className="cakes-headers-title">Tasty cakes</h2>
@@ -13,7 +15,13 @@ const Cakes = () => {
                     <div className="cakes-text">
                         Deserunt accusantium earum asperiores ullam consequatur quasi at
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        facilis, dolores, impedit, esse dolore ut
+                    </div>
+                    <div className="cakes-slider">
+                        <div className="cakes-slider-wrapper">
+                            <div className="cakes-slider-item"></div>
+                            <div className="cakes-slider-item"></div>
+                            <div className="cakes-slider-item"></div>
+                        </div>
                     </div>
                 </div>
             </div>

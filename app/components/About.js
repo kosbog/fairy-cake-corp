@@ -1,4 +1,5 @@
 import React from 'react';
+import cakesImg from '../assets/img/cakes.jpg';
 
 const About = () => {
     return (
@@ -26,10 +27,10 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-image">
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <div className="about-image-item"></div>
+                    <div className="about-image-item"></div>
+                    <div className="about-image-item"></div>
+                    <div className="about-image-item"></div>                    
                 </div>
             </div>
         </section>

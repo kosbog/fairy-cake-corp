@@ -1,11 +1,5 @@
 import React from 'react';
 
-const BakeyLabel = () => {
-    return (
-        <div className="bakery-label"></div>
-    )
-}
-
 const Navigation = () => {
     return (
         <nav>
@@ -47,7 +41,6 @@ const Header = () => {
             <h1 className="header-title">
                 Good Bakery Shop
             </h1>
-            <BakeyLabel />
         </header>
     )
 }

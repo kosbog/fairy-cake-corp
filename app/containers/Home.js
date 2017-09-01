@@ -4,6 +4,7 @@ import NoState from '../components/NoState';
 import Header from '../components/Header';
 import About from '../components/About';
 import Products from '../containers/Products';
+import BakeryLabel  from '../components/BakeryLabel';
 import { connect } from 'react-redux';
 import store from '../services/store';
 import { } from '../utils/utils'
@@ -31,8 +32,11 @@ class Home extends Component {
         return (
             <div className="container">
                 <Header />
+                <BakeryLabel />
                 <About />
+                <BakeryLabel />
                 <Products />
+                <BakeryLabel />
             </div>
 
         )
