@@ -1,5 +1,4 @@
 import React from 'react';
-import cakesImg from '../assets/img/cakes.jpg';
 
 const About = () => {
     return (

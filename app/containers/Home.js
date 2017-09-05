@@ -4,21 +4,22 @@ import NoState from '../components/NoState';
 import Header from '../components/Header';
 import About from '../components/About';
 import Products from '../containers/Products';
-import BakeryLabel  from '../components/BakeryLabel';
+import BakeryLabel from '../components/BakeryLabel';
 import { connect } from 'react-redux';
 import store from '../services/store';
-import { } from '../utils/utils'
-import {  } from '../services/actions/actions';
+import { parallaxScroll } from '../utils/utils'
+import { } from '../services/actions/actions';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           
+
         };
     }
 
     componentDidMount() {
+        parallaxScroll();
     }
 
     render() {
@@ -51,7 +52,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+
     }
 }
 

@@ -59,7 +59,7 @@ header {
         z-index: 3;
         width: 100%;
         height: 100px;
-        background-image: url(/app/assets/images/after.png);
+        background-image: url('../img/after.png');
         background-size: contain;
         background-position: center;
     }
@@ -268,13 +268,12 @@ nav {
     background-repeat: no-repeat;
     width: 100%;
     padding: 130px 0;
+    transition: .1s linear;
     &-wrapper {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
         background-color: #fff;
-        background-image: url("../img/texture.jpg");
-        background-size: 100% 100%;
         @include flex(row,
         nowrap,
         space-around,
@@ -286,7 +285,7 @@ nav {
             right: -70px;
             width: 170px;
             height: 170px;
-            background-image: url(/app/assets/images/star.png);
+            background-image: url('../img/star.png');
             background-position: center;
             background-repeat: no-repeat;
             background-color: #fff;
@@ -303,7 +302,101 @@ nav {
     &-info {
         width: 55%;
         padding: 30px 50px;
-        text-align-last: left;
+        text-align: left;
+    }
+    &-headers {
+        text-align: center;
+        &-title {
+            font-size: 46px;
+            margin: 10px 0;
+            font-stretch: normal;
+            color: #56534c;
+        }
+        &-subtitle {
+            font-size: 16px;
+            color: #a47d5e;
+            text-transform: uppercase;
+            font-family: 'PT Serif', serif;
+            letter-spacing: 1px;
+        }
+    }
+    &-text {
+        font-size: 15px;
+        padding-top: 60px;
+        padding-bottom: 90px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        line-height: 25px;
+    }
+    &-slider {
+        width: 100%;
+        padding: 0 20px;
+        &-wrapper {
+            @include flex(row,
+            nowrap,
+            space-around,
+            center);
+        }
+        &-item {
+            background-image: url('../img/cakes.jpg');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            &:hover {
+                box-shadow: -5px 5px 13px 4px #a47d5e;
+            }
+        }
+    }
+}
+
+// Cupcakes
+// 
+.cupcakes {
+    background-image: url('../img/cupcakes-bg.jpg');
+    background-position: center top;
+    background-repeat: repeat;
+    width: 100%;
+    padding: 130px 0;
+    transition: .1s linear;
+     &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.63);
+    }
+    &-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include flex(column,
+        nowrap,
+        space-around,
+        center);
+        z-index: 1;
+    }
+    &-image {
+        width: 100%;
+        @include flex(row,
+        nowrap,
+        space-between,
+        center);
+        img {
+            width: calc(95%/3);
+        }
+    }
+    &-info {
+        width: 100%;
+        padding: 30px 50px;
+        text-align: center;
+        background-image: url('../img/texture.jpg');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 23px 2px rgba(86, 83, 76, 0.53);
     }
     &-headers {
         text-align: center;
