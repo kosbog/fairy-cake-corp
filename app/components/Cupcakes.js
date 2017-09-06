@@ -5,7 +5,7 @@ import cupcake3 from '../assets/img/cupcake3.jpg';
 
 const Cakes = () => {
     return (
-        <div className="cupcakes">
+        <div className="cupcakes parallax">
             <div className="cupcakes-wrapper">
                 <div className="cupcakes-info">
                     <div className="cupcakes-headers">

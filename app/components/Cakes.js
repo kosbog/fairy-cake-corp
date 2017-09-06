@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cakes = () => {
     return (
-        <div className="cakes">
+        <div className="cakes parallax">
             <div className="cakes-wrapper">
                 <div className="cakes-image">
                     <img src="../assets/img/cakes.jpg" alt="" />
