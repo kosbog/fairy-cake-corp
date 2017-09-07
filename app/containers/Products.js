@@ -9,7 +9,6 @@ const Products = () => {
         <section className="products">
             <Cakes />
             <BakeryLabel />
-            <Table />
             <BakeryLabel />
             <Cupcakes />
         </section>

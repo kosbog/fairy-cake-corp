@@ -18,6 +18,11 @@ class Home extends Component {
         };
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log(arguments);
+        return false;
+    }
+
     componentDidMount() {
         parallaxScroll();
     }
