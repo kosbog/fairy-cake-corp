@@ -1,6 +1,6 @@
 import React from 'react';
 import cupcake1 from '../assets/img/cupcake1.jpg';
-import cupcake2 from '../assets/img/cakes.jpg';
+import cupcake2 from '../assets/img/cupcake2.jpg';
 import cupcake3 from '../assets/img/cupcake3.jpg';
 
 const Cupcakes = () => {
