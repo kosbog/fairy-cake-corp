@@ -3,6 +3,7 @@ import MoreItem from '../components/NoMatchRoute';
 import NoState from '../components/NoState';
 import Header from '../components/Header';
 import About from '../components/About';
+import Footer from '../components/Footer';
 import Products from '../containers/Products';
 import BakeryLabel from '../components/BakeryLabel';
 import { connect } from 'react-redux';
@@ -42,7 +43,7 @@ class Home extends Component {
                 <About />
                 <BakeryLabel />
                 <Products />
-                <BakeryLabel />
+                <Footer />
             </div>
 
         )

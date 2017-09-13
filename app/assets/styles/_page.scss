@@ -18,7 +18,7 @@ body {
 }
 
 body {
-    background-image: url(/app/assets/images/texture.jpg);
+    background-image: url('../img/texture.jpg');
     background-size: 100%;
     background-attachment: fixed;
 }
@@ -38,7 +38,7 @@ body {
 header {
     width: inherit;
     height: 90%;
-    background-image: url('../img/bg5.jpg');
+    background-image: url('../img/bg4.jpg');
     background-size: 100%;
     background-position: center bottom;
     text-align: center;
@@ -86,13 +86,17 @@ nav {
     space-around,
     baseline);
     color: #000;
-    background-color: rgba(255, 255, 255, 0.79);
+    background-color: rgba(255, 255, 255, 0.69);
     font-size: 14px;
 }
 
 .nav {
     width: 100%;
     max-width: 1280px;
+    color: #56534c;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    letter-spacing: 1px;
     @include flex(row,
     nowrap,
     space-around,
@@ -358,9 +362,9 @@ nav {
 // Cupcakes
 // 
 .cupcakes {
-    background-image: url('../img/cupcakes-bg.jpg');
-    background-position: center top;
-    background-repeat: repeat;
+    // background-image: url('../img/cupcakes-bg.jpg');
+    // background-position: center top;
+    // background-repeat: repeat;
     width: 100%;
     padding: 90px 0 50px;
     transition: .13s linear;
@@ -370,12 +374,11 @@ nav {
         top: 0;
         right: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(255, 254, 226, 0.93);
+        height: 100%; // background-color: rgba(255, 254, 226, 0.93);
     }
     &-wrapper {
         width: 100%;
-        max-width: 1280px;
+        max-width: 1200px;
         margin: 0 auto;
         @include flex(column,
         nowrap,
@@ -426,7 +429,7 @@ nav {
         width: 70%;
         @include flex(row,
         nowrap,
-        center,
+        flex-end,
         center);
         &-big {
             width: 100%;
@@ -449,7 +452,7 @@ nav {
             nowrap,
             space-around,
             center);
-            width: 22%;
+            width: 24%;
             background-color: rgba(255, 255, 255, 0.86);
             padding: 10px;
             img {
@@ -478,8 +481,7 @@ nav {
         nowrap,
         space-around,
         center);
-    }
-    // &-info {
+    } // &-info {
     //     width: 50%;
     // }
     &-book {
@@ -540,12 +542,11 @@ nav {
             }
         }
         .second-page {
-            z-index: 3;
-            // right: -16px;
+            z-index: 3; // right: -16px;
             // top: -16px;
         }
         .third-page {
-           z-index: 2;
+            z-index: 2;
         }
         .foutrh-page {
             z-index: 1;
@@ -612,6 +613,54 @@ nav {
     }
 }
 
+// Footer
+// 
+.footer {
+    &-wrapper {
+        font-family: 'Playfair Display', serif;
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding: 90px 0 50px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include flex(row,
+        nowrap,
+        space-around,
+        center);
+        a {
+            text-decoration: none;
+            color: #56534c;
+        }
+    }
+    &-nav {
+        width: 40%;
+        padding: 26px 0;
+        @include flex(row,
+        nowrap,
+        space-around,
+        center);
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: #56534c;
+            width: 100%;
+            height: 1px;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+    &-logo {
+        width: 20%;
+    }
+}
+
 // Nostate, Nomatch
 // 
 .nostate,
@@ -629,13 +678,13 @@ nav {
 // 
 .page-flip {
     animation: page-flip .8s linear forwards;
-    &  * {
+    & * {
         transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 }
 
 .menu-book-position {
-    animation: menu-book-position .6s linear forwards;    
+    animation: menu-book-position .6s linear forwards;
 }
 
 @keyframes page-flip {
