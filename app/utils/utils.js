@@ -14,31 +14,39 @@ export const parallaxScroll = () => {
 export const menuBookAnimation = () => {
     let menuBook = document.getElementsByClassName('menu-book')[0],
         page = document.getElementsByClassName('menu-book-page'),
+        checkClass = 'page-opacity',
         menuBookPages = [];
 
     menuBookPages = [...page];
 
-    let wasMoved = false;
-
-    menuBook.classList.add('menu-book-position');
-    wasMoved = true;
-
-    if (wasMoved) {
-        for (let item of menuBookPages) {
-            let temporaryPage = item;
-            if (!temporaryPage.classList.contains('page-flip')) {
-                setTimeout(function() {
-                    temporaryPage.style.zIndex = "0";
-                }, 1000);
-                temporaryPage.classList.add('page-flip');
-                break;
-            }
+    // Page opacity animation
+    // 
+    for (let item of menuBookPages) {
+        if (!item.classList.contains(checkClass)) {
+            setTimeout(function() {
+                item.style.display = "none";
+            }, 1000);
+            item.classList.add(checkClass);
+            break;
+            // TODO: cerate promise ???
         }
     }
 
-
+    // Full book animation
+    // 
+    // let wasMoved = false;
+    // menuBook.classList.add('menu-book-position');
+    // wasMoved = true;
+    // if (wasMoved) {
+    //     for (let item of menuBookPages) {
+    //         let temporaryPage = item;
+    //         if (!temporaryPage.classList.contains('page-flip')) {
+    //             setTimeout(function() {
+    //                 temporaryPage.style.zIndex = "0";
+    //             }, 1000);
+    //             temporaryPage.classList.add('page-flip');
+    //             break;
+    //         }
+    //     }
+    // }
 }
-
-// setTimeout(function() {
-//     menuBookPage.classList.add('page-flip');
-// }, 600);

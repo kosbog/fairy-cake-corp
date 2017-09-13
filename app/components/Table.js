@@ -70,7 +70,7 @@ const MenuBook = () => {
         }
     ]
     return (
-        <div className="menu-book">
+        <div className="menu-book ">
             <FrontPage />
             {data.map((item, index)=>{
                 return(
@@ -83,7 +83,7 @@ const MenuBook = () => {
 
 const Table = () => {
     return (
-        <div className="menu">
+        <div className="menu parallax">
             <div className="menu-wrapper">
                 <MenuBook />
 

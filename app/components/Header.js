@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/img/logo.png';
 
 const Navigation = () => {
     return (
@@ -36,11 +37,12 @@ const Navigation = () => {
 
 const Header = () => {
     return (
-        <header>
+        <header className="parallax">
             <Navigation />
-            <h1 className="header-title">
-                Good Bakery Shop
-            </h1>
+            <img src={logo} alt=""/>
+            <h3>
+                something about our candy shop
+            </h3>
         </header>
     )
 }
