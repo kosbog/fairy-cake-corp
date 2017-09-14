@@ -37,19 +37,11 @@ body {
 // 
 header {
     width: inherit;
-    height: 90%;
+    height: 94%;
     background-image: url('../img/bg7.jpg');
     background-size: cover;
     background-position: center top;
     text-align: center;
-
-    img {
-        display: block;
-        top: 20%;
-        width: 100%;
-        max-width: 441px;
-        margin: 0 auto;
-    }
 }
 
 .bakery-label {
@@ -80,10 +72,20 @@ header {
 }
 
 .header-title {
-    top: 100px;
-    font-size: 90px;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 0 1px 1px #000;
+}
+
+.header-logo {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    top: 47%;
+    transform: translateY(-50%);
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 nav {
@@ -239,7 +241,6 @@ nav {
         &-item {
             width: 290px;
             height: 245px;
-            background-image: url('../img/cakes.jpg');
             background-size: cover;
             background-position: right top;
             margin: 15px;
@@ -252,6 +253,20 @@ nav {
                 height: calc(100% - 18px);
                 background-color: transparent;
                 border: 4px solid #fff;
+            }
+        }
+        .item {
+            &-1 {
+                background-image: url('../img/cakes/15_17934083_1269178569845568_3621879018011230208_n.jpg');
+            }
+            &-2 {
+                background-image: url('../img/cakes/18_17931757_839451559513035_2273986175922339840_n.jpg');
+            }
+            &-3 {
+                background-image: url('../img/cakes/21_17881727_273514463097628_650020098836267008_n.jpg');
+            }
+            &-4 {
+                background-image: url('../img/cakes/9_18581177_438973203133005_4403306432997359616_n.jpg');
             }
         }
         &:after {
@@ -312,7 +327,7 @@ nav {
     &-image {
         width: 45%;
         min-height: 500px;
-        background-image: url('../img/cakes.jpg');
+        background-image: url('../img/cakes/15_17934083_1269178569845568_3621879018011230208_n.jpg');
         background-size: cover;
         background-position: 90% top;
     }
@@ -634,7 +649,7 @@ nav {
         margin: 0 auto;
         @include flex(row,
         nowrap,
-        space-around,
+        space-between,
         center);
         a {
             text-decoration: none;
@@ -642,7 +657,7 @@ nav {
         }
     }
     &-nav {
-        width: 40%;
+        width: 37%;
         padding: 26px 0;
         @include flex(row,
         nowrap,
@@ -666,6 +681,10 @@ nav {
     }
     &-logo {
         width: 20%;
+        top: -12px;
+         img {
+             width: 100%;
+         }
     }
 }
 
@@ -684,7 +703,6 @@ nav {
 
 // Animations
 // 
-
 .parallax {
     background-attachment: fixed;
 }
@@ -697,7 +715,7 @@ nav {
 }
 
 .page-opacity {
-        animation: page-opacity .8s linear forwards;
+    animation: page-opacity .8s linear forwards;
 }
 
 .menu-book-position {

@@ -26,10 +26,10 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-image">
-                    <div className="about-image-item"></div>
-                    <div className="about-image-item"></div>
-                    <div className="about-image-item"></div>
-                    <div className="about-image-item"></div>                    
+                    <div className="about-image-item item-1"></div>
+                    <div className="about-image-item item-2"></div>
+                    <div className="about-image-item item-3"></div>
+                    <div className="about-image-item item-4"></div>                    
                 </div>
             </div>
         </section>

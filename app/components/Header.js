@@ -1,6 +1,18 @@
 import React from 'react';
 import logo from '../assets/img/logo.png';
 
+const MainLogo = () => {
+    return (
+        <div className="header-logo">
+            <img src={logo} alt="" />
+            <h1 className="header-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                Itaque placeat amet
+            </h1>
+        </div>
+    )
+}
+
 const Navigation = () => {
     return (
         <nav>
@@ -39,10 +51,7 @@ const Header = () => {
     return (
         <header className="parallax">
             <Navigation />
-            <img src={logo} alt=""/>
-            <h3>
-                something about our candy shop
-            </h3>
+            <MainLogo />
         </header>
     )
 }
