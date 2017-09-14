@@ -86,8 +86,11 @@ const Table = () => {
         <div className="menu parallax">
             <div className="menu-wrapper">
                 <MenuBook />
-
                 <div className="menu-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Incidunt quae saepe quasi autem? 
+                    Facilis neque eaque corrupti explicabo dolor impedit saepe hic. 
+                    Labore doloremque praesentium adipisci expedita nostrum id quod!
                 </div>
             </div>
         </div>

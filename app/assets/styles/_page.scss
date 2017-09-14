@@ -502,15 +502,15 @@ nav {
         margin: 0 auto;
         @include flex(row,
         nowrap,
-        space-around,
+        space-between,
         center);
-    } // &-info {
-    //     width: 50%;
-    // }
+    } 
+    &-info {
+        width: 50%;
+    }
     &-book {
         width: 487px;
         height: 649px;
-        margin: 0 auto;
         &-page {
             position: absolute;
             width: 487px;
@@ -657,7 +657,7 @@ nav {
         }
     }
     &-nav {
-        width: 37%;
+        width: 40%;
         padding: 26px 0;
         @include flex(row,
         nowrap,
@@ -680,8 +680,7 @@ nav {
         }
     }
     &-logo {
-        width: 20%;
-        top: -12px;
+        width: 14%;
          img {
              width: 100%;
          }
