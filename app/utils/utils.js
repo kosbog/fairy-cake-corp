@@ -1,15 +1,33 @@
 // help functions here
 export const parallaxScroll = () => {
-    addEventListener('scroll', function() {
-        const elementsArr = document.getElementsByClassName('parallax'),
-            yPos = -(window.pageYOffset / 9),
-            position = 'center ' + yPos + 'px';
+    const elementsArr = document.getElementsByClassName('parallax'),
+        yPos = -(window.pageYOffset / 9),
+        position = 'center ' + yPos + 'px';
 
-        [...elementsArr].forEach(function(element) {
-            element.style.backgroundPosition = position;
-        });
+    [...elementsArr].forEach(function(element) {
+        element.style.backgroundPosition = position;
     });
 };
+
+export const scrollToTop = () => {
+    let scrollStep = -window.scrollY / (1000 / 45),
+        scrollInterval = setInterval(function() {
+            if (window.scrollY != 0) {
+                window.scrollBy(0, scrollStep);
+            }
+            else clearInterval(scrollInterval);
+        }, 15);
+}
+
+export const showScrollTopButton = () => {
+    let scrollButton = document.getElementsByClassName('scroll-top-button')[0],
+        showClass = 'show',
+        scrollPosY = window.scrollY;
+
+    scrollPosY > 1000 ? 
+    scrollButton.classList.add(showClass) : 
+    scrollButton.classList.remove(showClass);
+}
 
 export const menuBookAnimation = () => {
     let menuBook = document.getElementsByClassName('menu-book')[0],
@@ -50,3 +68,4 @@ export const menuBookAnimation = () => {
     //     }
     // }
 }
+

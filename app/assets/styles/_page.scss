@@ -37,7 +37,7 @@ body {
 // 
 header {
     width: inherit;
-    height: 94%;
+    height: 100%;
     background-image: url('../img/bg7.jpg');
     background-size: cover;
     background-position: center top;
@@ -89,23 +89,54 @@ header {
 }
 
 nav {
-    width: 100%;
+    width: 50%;
+    min-width: 1000px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin: 0 auto;
+    padding: 8px 0;
     @include flex(row,
     nowrap,
     space-around,
     baseline);
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.69);
+    background-color: rgba(255, 255, 255, 1);
     font-size: 14px;
+    .show-menu {
+        @include flex(column,
+        nowrap,
+        center,
+        center);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 30px;
+        background-color: #fff;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .shadow-line {
+        height: 2px;
+        width: 50%;
+        margin: 2px 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7db9e8+100 */
+        background: #fff;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #fff 0%, #b3b3b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #fff 0%, #b3b3b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #fff 0%, #b3b3b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#b3b3b3', GradientType=0);
+        /* IE6-9 */
+    }
 }
 
 .nav {
     width: 100%;
-    max-width: 1280px;
-    color: #56534c;
     font-family: 'Playfair Display', serif;
-    font-size: 16px;
     letter-spacing: 1px;
     @include flex(row,
     nowrap,
@@ -118,33 +149,64 @@ nav {
     &-logo {
         width: calc(100%/4);
     }
+    &-logo {
+        .logo {
+            width: 52px;
+        }
+    }
     &-list {
         @include flex(row,
         nowrap,
-        space-around,
+        center,
         baseline);
+        margin: 0;
+    }
+    .menu-list {
+        li {
+            display: block;
+            padding: 0 20px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -2px;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 1px;
+                background-color: #000;
+                border-radius: 50%;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        a {
+            color: #56534c;
+        }
     }
     .social-list {
         justify-content: center;
         li {
-            margin: 0 10px;
+            margin: 0 5px;
         }
     }
     .social {
         display: block;
         background-size: 100%;
         background-position: center;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
     .fb {
-        background-image: url("../img/facebook32.png");
+        background-image: url("../img/socials/facebook.png");
     }
-    .google {
-        background-image: url("../img/googleplus32.png");
+    .phone {
+        background-image: url("../img/socials/phone.png");
     }
-    .inst {
-        background-image: url("../img/instagram32.png");
+    .insta {
+        background-image: url("../img/socials/instagram.png");
     }
 }
 
@@ -297,7 +359,7 @@ nav {
     background-image: url('../img/cakes-bg2.jpg');
     background-size: cover;
     background-position: center top;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 100%;
     padding: 170px 0;
     transition: .13s linear;
@@ -504,7 +566,7 @@ nav {
         nowrap,
         space-between,
         center);
-    } 
+    }
     &-info {
         width: 50%;
     }
@@ -681,10 +743,45 @@ nav {
     }
     &-logo {
         width: 14%;
-         img {
-             width: 100%;
-         }
+        img {
+            width: 100%;
+        }
     }
+}
+
+// Scroll Top Button
+// 
+.scroll-top-button {
+    display: none;
+    position: fixed;
+    right: 90px;
+    bottom: 72px;
+    width: 63px;
+    height: 63px;
+    background-image: url('../img/arrow.png');
+    background-position: center;
+    transform: rotateZ(270deg);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    button {
+        border: none;
+    }
+    &:hover {
+        transition: .3s;
+        box-shadow: 0 0 20px -2px #000;
+    }
+}
+
+// Help classes
+// 
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
 
 // Nostate, Nomatch

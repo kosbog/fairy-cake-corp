@@ -18,30 +18,45 @@ const Navigation = () => {
         <nav>
             <div className="nav">
                 <div className="nav-logo">
-                    <img src="" alt="" className="logo" />
+                    <img src={logo} alt="" className="logo" />
                 </div>
                 <div className="nav-menu">
-                    <ul className="nav-list">
-                        <li className="nav-list-item">Different</li>
-                        <li className="nav-list-item">Links</li>
-                        <li className="nav-list-item">Will be</li>
-                        <li className="nav-list-item">Just</li>
-                        <li className="nav-list-item">Here</li>
+                    <ul className="nav-list menu-list">
+                        <li className="nav-list-item">
+                            <a href="">О нас</a>
+                        </li>
+                        <li className="nav-list-item">
+                            <a href="">Меню</a>
+                        </li>
+                        <li className="nav-list-item">
+                            <a href="">Акции</a>
+                        </li>
+                        <li className="nav-list-item">
+                            <a href="">Новости</a>
+                        </li>
+                        <li className="nav-list-item">
+                            <a href="">Контакты</a>
+                        </li>
                     </ul>
                 </div>
                 <div className="nav-socials">
                     <ul className="nav-list social-list">
                         <li className="nav-list-item">
-                            <a href="#" className="social fb"></a>
+                            <a href="https://www.facebook.com/groups/564769627045161" className="social fb"></a>
                         </li>
                         <li className="nav-list-item">
-                            <a href="#" className="social inst"></a>
+                            <a href="https://www.instagram.com/fairycakecorp" className="social insta"></a>
                         </li>
                         <li className="nav-list-item">
-                            <a href="#" className="social google"></a>
+                            <a href="#" className="social phone"></a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div className="show-menu">
+                <span className="shadow-line"></span>
+                <span className="shadow-line"></span>
+                <span className="shadow-line"></span>
             </div>
         </nav>
     )
