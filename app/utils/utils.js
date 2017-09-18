@@ -24,9 +24,9 @@ export const showScrollTopButton = () => {
         showClass = 'show',
         scrollPosY = window.scrollY;
 
-    scrollPosY > 1000 ? 
-    scrollButton.classList.add(showClass) : 
-    scrollButton.classList.remove(showClass);
+    scrollPosY > 1000 ?
+        scrollButton.classList.add(showClass) :
+        scrollButton.classList.remove(showClass);
 }
 
 export const menuBookAnimation = () => {
@@ -49,23 +49,16 @@ export const menuBookAnimation = () => {
             // TODO: cerate promise ???
         }
     }
+}
 
-    // Full book animation
-    // 
-    // let wasMoved = false;
-    // menuBook.classList.add('menu-book-position');
-    // wasMoved = true;
-    // if (wasMoved) {
-    //     for (let item of menuBookPages) {
-    //         let temporaryPage = item;
-    //         if (!temporaryPage.classList.contains('page-flip')) {
-    //             setTimeout(function() {
-    //                 temporaryPage.style.zIndex = "0";
-    //             }, 1000);
-    //             temporaryPage.classList.add('page-flip');
-    //             break;
-    //         }
-    //     }
-    // }
+export const stickyNavigation = () => {
+    let navigation = document.getElementsByTagName('nav')[0],
+        pageYOffset = window.pageYOffset,
+        classSticky = 'sticky',
+        staticPos = 52;
+
+    pageYOffset > 52 ?
+        navigation.classList.add(classSticky) :
+        navigation.classList.remove(classSticky);
 }
 

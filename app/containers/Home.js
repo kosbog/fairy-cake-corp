@@ -9,7 +9,7 @@ import BakeryLabel from '../components/BakeryLabel';
 import ScrollTopButton from '../components/ScrollTopButton';
 import { connect } from 'react-redux';
 import store from '../services/store';
-import { parallaxScroll, showScrollTopButton } from '../utils/utils'
+import { parallaxScroll, showScrollTopButton, stickyNavigation } from '../utils/utils'
 import { } from '../services/actions/actions';
 
 class Home extends Component {
@@ -28,6 +28,7 @@ class Home extends Component {
     componentDidMount() {
         document.addEventListener('scroll', parallaxScroll);
         document.addEventListener('scroll', showScrollTopButton);
+        document.addEventListener('scroll', stickyNavigation);
     }
 
     render() {

@@ -89,6 +89,7 @@ header {
 }
 
 nav {
+   
     width: 50%;
     min-width: 1000px;
     border-bottom-left-radius: 20px;
@@ -782,6 +783,18 @@ nav {
 
 .hidden {
     display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: -52px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    &:hover {
+        top: 0;
+        transition: .3s
+    }
 }
 
 // Nostate, Nomatch
