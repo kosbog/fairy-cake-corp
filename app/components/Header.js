@@ -1,15 +1,19 @@
 import React from 'react';
 import logo from '../assets/img/logo.png';
 
-const MainLogo = () => {
+const Logo = () => {
     return (
         <div className="header-logo">
             <img src={logo} alt="" />
-            <h1 className="header-title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                Itaque placeat amet
-            </h1>
         </div>
+    )
+}
+
+const Greeting = () => {
+    return (
+        <h1 className="header-title">
+            Добро пожаловать в нашу кондитерскую!
+        </h1>
     )
 }
 
@@ -66,7 +70,10 @@ const Header = () => {
     return (
         <header className="parallax">
             <Navigation />
-            <MainLogo />
+            <div className="header-wrapper">
+                <Logo />
+                <Greeting />
+            </div>
         </header>
     )
 }

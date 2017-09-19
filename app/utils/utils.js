@@ -33,6 +33,7 @@ export const menuBookAnimation = () => {
     let menuBook = document.getElementsByClassName('menu-book')[0],
         page = document.getElementsByClassName('menu-book-page'),
         checkClass = 'page-opacity',
+        lastPageClass = 'last-page',
         menuBookPages = [];
 
     menuBookPages = [...page];
@@ -40,7 +41,7 @@ export const menuBookAnimation = () => {
     // Page opacity animation
     // 
     for (let item of menuBookPages) {
-        if (!item.classList.contains(checkClass)) {
+        if (!item.classList.contains(checkClass) && !item.classList.contains(lastPageClass)) {
             setTimeout(function() {
                 item.style.display = "none";
             }, 1000);

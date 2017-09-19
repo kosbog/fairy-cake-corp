@@ -83,10 +83,12 @@ const MenuBook = () => {
 
 const Table = () => {
     return (
-        <div className="menu parallax">
+        <div className="menu">
             <div className="menu-wrapper">
                 <MenuBook />
                 <div className="menu-info">
+                <h2>Offers</h2>
+                <h3>something is here</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Incidunt quae saepe quasi autem? 
                     Facilis neque eaque corrupti explicabo dolor impedit saepe hic. 

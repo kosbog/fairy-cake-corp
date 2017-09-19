@@ -42,6 +42,7 @@ class Home extends Component {
         return (
             <div className="container">
                 <Header />
+                <BakeryLabel />
                 <About />
                 <BakeryLabel />
                 <Products />
