@@ -29,6 +29,8 @@ export const showScrollTopButton = () => {
         scrollButton.classList.remove(showClass);
 }
 
+// Page opacity animation
+// 
 export const menuBookAnimation = () => {
     let menuBook = document.getElementsByClassName('menu-book')[0],
         page = document.getElementsByClassName('menu-book-page'),
@@ -38,18 +40,17 @@ export const menuBookAnimation = () => {
 
     menuBookPages = [...page];
 
-    // Page opacity animation
-    // 
-    for (let item of menuBookPages) {
-        if (!item.classList.contains(checkClass) && !item.classList.contains(lastPageClass)) {
+    for(let i = 0; i < menuBookPages.length-1; i++) {
+        let item = menuBookPages[i];
+        if (!item.classList.contains(checkClass)) {
             setTimeout(function() {
                 item.style.display = "none";
             }, 1000);
             item.classList.add(checkClass);
-            break;
+            return false;
             // TODO: cerate promise ???
         }
-    }
+    };
 }
 
 export const stickyNavigation = () => {

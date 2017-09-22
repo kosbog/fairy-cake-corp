@@ -1,3 +1,39 @@
-[
-    
-]
+{
+  "cakes": [
+    {
+      "id": "001",
+      "name": "Три шоколада",
+      "description": "Какая-то информация о продукте",
+      "image": {
+        "icon": "/icon/url",
+        "full": "/full/url"
+      },
+      "composing": [
+        {
+          "name": "Тесто",
+          "type": "бисквит",
+          "image": "/url/to/item"
+        },
+        {
+          "name": "Крем",
+          "type": "шоколадный",
+          "image": "/url/to/item"
+        },
+        {
+          "name": "Шоколад",
+          "type": ["белый", "чорный", "молочный"],
+          "image": "/url/to/item"
+        },
+        {
+          "name": "Сливки",
+          "type": "15%",
+          "image": "/url/to/item"
+        }
+      ],
+      "price": {
+        "UAH": "250",
+        "USD": "10"
+      }
+    }
+  ]
+}
