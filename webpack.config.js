@@ -1,18 +1,14 @@
-// import path from 'path';
 const path = require("path");
-// import webpack from 'webpack';
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 
 const extractSass = new ExtractTextPlugin({
     filename: "index.css"
 });
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'index.js',
@@ -21,7 +17,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.ts?$/,
+                test: /\.tsx?$/,
                 loader: 'awesome-typescript-loader',
                 exclude: /node_modules/
                 // options: {
