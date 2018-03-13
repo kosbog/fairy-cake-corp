@@ -1,17 +1,16 @@
 import * as React from "react";
+import Home from "./Home";
 
-class App  extends React.Component<IProps, {}> {
-    constructor(props: IProps) {
-        super(props);
-    }
+interface IProps { name: string; }
 
+class App extends React.Component<{}, {}> {
     render() {
         return (
-            <h1>Hello, {this.props.name}</h1>
+            <div>
+                <Home />
+            </div>
         );
     }
 }
-
-interface IProps { name: string; }
 
 export default App;

@@ -2,3 +2,5 @@
 *.lock
 node_modules
 .vscode
+Cakes
+.DS_Store

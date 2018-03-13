@@ -6,6 +6,6 @@ import "./assets/styles/index.scss";
 const ROOT = document.getElementById("app");
 
 ReactDOM.render(
-    <App name="lol"/>,
+    <App />,
     ROOT
 );

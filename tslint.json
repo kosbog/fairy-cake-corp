@@ -13,11 +13,19 @@
             "jsx-double"
         ],
         "eofline": true,
+        "align": [
+            true,
+            "parameters",
+            "statements",
+            "members",
+            "elements",
+            "arguments"
+        ],
         "trailing-comma": [
             true,
             {
                 "multiline": {
-                    "objects": "always",
+                    "objects": "never",
                     "arrays": "always",
                     "functions": "never",
                     "typeLiterals": "ignore"
@@ -29,8 +37,14 @@
             true,
             "always-prefix"
         ],
-        "array-type": [true, "array"],
-        "object-literal-key-quotes": [true, "always"],
+        "array-type": [
+            true,
+            "array"
+        ],
+        "object-literal-key-quotes": [
+            true,
+            "always"
+        ],
         "whitespace": [
             true,
             "check-branch",
