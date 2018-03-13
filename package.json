@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "lint": "tslint -c ./tslint.json './src/**/*.ts*'"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "sass-loader": "^6.0.7",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
+    "tslint": "^5.9.1",
     "typescript": "^2.7.2",
     "uglifyjs-webpack-plugin": "^1.2.3",
     "webpack": "^3.11.0",
