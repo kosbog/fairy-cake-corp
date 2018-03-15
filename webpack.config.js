@@ -40,7 +40,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|jpeg|gif|png|svg)$/,
                 loader: 'file-loader',
                 options: {
                     name: 'src/assets/images/[name].[ext]'

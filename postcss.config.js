@@ -8,6 +8,9 @@ module.exports = {
                 "not ie < 10"
             ]
         },
+        'postcss-assets': {
+            'loadPaths': ['**']  // background-image: resolve('any-image.png');
+        },
         'cssnano': {
             preset: ['default', {
                 discardComments: {
