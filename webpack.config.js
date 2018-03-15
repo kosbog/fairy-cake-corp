@@ -20,25 +20,22 @@ module.exports = {
                 test: /\.tsx?$/,
                 loader: 'awesome-typescript-loader',
                 exclude: /node_modules/
-                // options: {
-                //     presets: ['react', ['env', {
-                //         targets: {
-                //             browsers: ['last 2 versions']
-                //         }
-                //     }],
-                //         'stage-2'
-                //     ],
-                //     env: {
-                //         production: {
-                //             presets: ['react-optimize']
-                //         }
-                //     }
-                // }
             },
             {
                 test: /\.scss?$/,
                 use: extractSass.extract({
-                    use: ['css-loader', 'sass-loader'],
+                    use: [{
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: {
+                                path: './postcss.config.js'
+                            }
+                        }
+                    }, 'sass-loader'],
                     fallback: "style-loader"
                 })
             },
@@ -64,7 +61,7 @@ module.exports = {
                 enforce: "pre",
                 test: /\.js$/,
                 loader: "source-map-loader"
-              }
+            }
         ]
     },
     devServer: {
@@ -83,7 +80,7 @@ module.exports = {
     devtool: "source-map",
     resolve: {
         extensions: [".js", ".ts", ".tsx", ".json"]
-      }
+    }
 }
 
 // if (process.env.NODE_ENV === 'prod') {
