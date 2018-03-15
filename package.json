@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "lint": "tslint -c ./tslint.json './src/**/*.ts*'"
+    "lint": "tslint -c ./tslint.json './src/**/*.ts*'",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "node-sass": "^4.7.2",
     "postcss-assets": "^5.0.0",
     "postcss-loader": "^2.1.1",
+    "postcss-sprites": "^4.2.1",
     "sass-loader": "^6.0.7",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",

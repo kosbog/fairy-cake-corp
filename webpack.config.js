@@ -12,7 +12,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'index.js',
-        publicPath: '/'
+        publicPath: './'
     },
     module: {
         rules: [
@@ -43,7 +43,7 @@ module.exports = {
                 test: /\.(jpg|jpeg|gif|png|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'src/assets/images/[name].[ext]'
+                    name: '[path][name].[ext]'
                 }
             },
             {
