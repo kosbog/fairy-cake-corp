@@ -1,0 +1,11 @@
+@media screen and (max-width: 768) {
+    .msg {
+        &-box {}
+        &-content {
+            
+            &_title {
+                // font-size: 20px;
+            }
+        }
+    }
+}
