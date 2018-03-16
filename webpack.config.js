@@ -2,17 +2,17 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
     filename: "index.css"
 });
 
-module.exports = {
+const config = {
     entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'index.js',
-        publicPath: './'
+        filename: 'index.js'
     },
     module: {
         rules: [
@@ -66,8 +66,10 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
+        open: true
     },
     plugins: [
+        new CleanWebpackPlugin('dist'),        
         new HtmlWebpackPlugin({
             title: 'Example',
             template: './src/index.html',
@@ -83,13 +85,15 @@ module.exports = {
     }
 }
 
-// if (process.env.NODE_ENV === 'prod') {
-//     Config.plugins.push(
-//         new webpack.DefinePlugin({
-//             'process.env': {
-//                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-//             }
-//         }),
-//         new webpack.optimize.UglifyJsPlugin()
-//     );
-// }
+if (process.env.NODE_ENV === 'prod') {
+    config.plugins.push(
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true
+        })
+    );
+}
+
+module.exports = config;
