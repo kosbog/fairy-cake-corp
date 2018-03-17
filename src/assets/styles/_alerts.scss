@@ -5,24 +5,18 @@
         border-width: 3px;
         border-style: solid;
         border-radius: 40px;
-        max-width: 450px;
+        max-width: 520px;
+        min-height: 75px;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex(row, nowrap, center, center);
     }
-    &-warning {
-        border-color: #ffc000;
-    }
-    &-info {
-        border-color: #41b6e2;
-    }
-    &-confirm {
-        border-color: #46cf93;
-    }
-    &-error {
-        border-color: #ff5555;
+    @each $selector in warning,
+    info,
+    confirm,
+    error {
+        &-#{$selector} {
+            @include defineColor(#{$selector}, 'border-color');
+        }
     }
     &-icon {
         position: absolute;
@@ -34,8 +28,7 @@
         border-color: inherit;
         &:before,
         &:after {
-            content: '';
-            position: inherit;
+            @extend %after-before;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,83 +46,21 @@
         padding-left: 10px;
         width: 70%;
         &_title {
-            color: #ffc000;
             font-size: 24px;
             margin: 0;
         }
+        @each $selector in warning,
+        info,
+        confirm,
+        error {
+            .#{$selector}-title {
+                @include defineColor(#{$selector}, 'color');
+            }
+        }
         &_description {
+            font-family: $secondary-font;
             margin: 0;
             font-size: 16px;
-        }
-    }
-}
-
-.icon {
-    font-size: 36px;
-    font-family: FontAwesome;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 1px;
-    width: 100%;
-    height: 100%;
-    line-height: 70px;
-    text-align: center;
-    &-warning {
-        color: #ffc000;
-    }
-    &-info {
-        color: #41b6e2;
-    }
-    &-confirm {
-        color: #46cf93;
-    }
-    &-error {
-        color: #ff5555;
-    }
-}
-
-.btn {
-    &-close {
-        display: block;
-        position: absolute;
-        z-index: 1;
-        top: 21px;
-        right: 20px;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: #c1bfbf;
-        transition: all .3s;
-        &:before,
-        &:after {
-            display: block;
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-            background-color: #fff;
-        }
-        &:before {
-            width: 14px;
-            height: 2px;
-            margin-left: -7px;
-            margin-top: -1px;
-            transform: rotate( 45deg);
-        }
-        &:after {
-            width: 2px;
-            height: 14px;
-            margin-left: -1px;
-            margin-top: -7px;
-            transform: rotate( 225deg);
-            
-        }
-        &:hover {
-            opacity: .6;
-            transform: rotate( 180deg);
-            transition: all .3s;
         }
     }
 }

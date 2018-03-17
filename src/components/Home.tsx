@@ -1,5 +1,5 @@
 import * as React from "react";
-import Alerts from './common/Alerts';
+import Alerts from "./common/Alerts";
 
 class Home extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -12,7 +12,7 @@ class Home extends React.Component<{}, {}> {
     render() {
         return (
             <div>
-                <Alerts />
+                <Alerts type={"warning"} />
             </div>
         );
     }

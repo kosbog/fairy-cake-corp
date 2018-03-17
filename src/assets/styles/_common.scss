@@ -1,0 +1,85 @@
+// Common styles
+// 
+* {
+    position: relative;
+    box-sizing: border-box;
+    font-family: $primary-font;
+}
+
+html,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+img,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+figure,
+nav,
+output,
+section,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+// Mixins
+// 
+@mixin flex($direction, $wrapping, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrapping;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin defineColor($define-selector, $css-selector) {
+    @if $define-selector==warning {
+        #{$css-selector}: $warning-color;
+    }
+    @else if $define-selector==info {
+        #{$css-selector}: $info-color;
+    }
+    @else if $define-selector==error {
+        #{$css-selector}: $error-color;
+    }
+    @else {
+        #{$css-selector}: $confirm-color;
+    }
+}
+
+// Inheritance
+// 
+%after-before {
+    display: block;
+    content: '';
+    position: absolute;
+}
