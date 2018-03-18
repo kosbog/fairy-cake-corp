@@ -69,7 +69,7 @@ const config = {
         open: true
     },
     plugins: [
-        new CleanWebpackPlugin('dist'),        
+        new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
             title: 'Example',
             template: './src/index.html',

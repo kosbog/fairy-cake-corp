@@ -1,5 +1,6 @@
 import * as React from "react";
 import Alerts from "./common/Alerts";
+import Divider from "./common/Divider";
 
 class Home extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -16,6 +17,7 @@ class Home extends React.Component<{}, {}> {
                 <Alerts type={"error"} icon={"ban"} content={"Error box"} />
                 <Alerts type={"info"} icon={"info"} content={"Information box"} />
                 <Alerts type={"confirm"} icon={"check"} content={"Confirmation box"} />
+                <Divider test={"test"} />
             </div>
         );
     }

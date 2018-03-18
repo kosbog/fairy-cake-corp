@@ -1,0 +1,26 @@
+.divider {
+    -webkit-appearance: none;
+    z-index: 1;
+    margin: 0 auto;
+    outline-style: none;
+    text-align: center;
+    min-height: 3px;
+    overflow: hidden;
+    &:before {
+        @extend %after-before;
+        z-index: -1;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        margin-top: -1.5px;
+        border-bottom: 3px solid;
+        border-color: $divider-color;
+    }
+    img {
+        width: 75px;
+        display: block;
+        margin: auto;
+        padding: 0 20px;
+        background: $default-color;
+    }
+}
