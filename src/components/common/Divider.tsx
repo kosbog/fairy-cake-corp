@@ -1,14 +1,13 @@
 import * as React from "react";
-// import divider from "../../assets/images/divider_1.png";
 
 interface IProps {
-    test: string;
+    type: string;
 }
 
-const Divider = ({ test }: IProps) => {
+const Divider = ({ type }: IProps) => {
     return (
         <div className="divider">
-            <img src="" alt="" />
+            <img src={type} alt={type} />
         </div>
     );
 };

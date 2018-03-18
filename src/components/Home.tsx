@@ -17,7 +17,7 @@ class Home extends React.Component<{}, {}> {
                 <Alerts type={"error"} icon={"ban"} content={"Error box"} />
                 <Alerts type={"info"} icon={"info"} content={"Information box"} />
                 <Alerts type={"confirm"} icon={"check"} content={"Confirmation box"} />
-                <Divider test={"test"} />
+                <Divider type={"divider_1"} />
             </div>
         );
     }
