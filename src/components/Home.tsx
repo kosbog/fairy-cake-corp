@@ -12,7 +12,10 @@ class Home extends React.Component<{}, {}> {
     render() {
         return (
             <div>
-                <Alerts type={"warning"} />
+                <Alerts type={"warning"} icon={"exclamation"} content={"Warning box"} />
+                <Alerts type={"error"} icon={"ban"} content={"Error box"} />
+                <Alerts type={"info"} icon={"info"} content={"Information box"} />
+                <Alerts type={"confirm"} icon={"check"} content={"Confirmation box"} />
             </div>
         );
     }

@@ -2,6 +2,7 @@
     &-box {
         position: relative;
         padding: 14px;
+        margin: 5px;
         border-width: 3px;
         border-style: solid;
         border-radius: 40px;
@@ -22,7 +23,7 @@
         position: absolute;
         z-index: 1;
         top: -3px;
-        left: 1px;
+        left: 2px;
         width: 64px;
         height: 64px;
         border-color: inherit;
