@@ -1,4 +1,131 @@
 .btn {
+    background-color: $default-color;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px $default-color;
+    width: 100%;
+    margin: 20px;
+    border: 0;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+    color: $primary-color;
+    line-height: 40px;
+    &:before,
+    &:after {
+        @extend %after-before;
+        z-index: 1;
+        top: 0;
+        height: 100%;
+        width: 40%;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 3px solid;
+        border-color: inherit;
+    }
+    &:before {
+        left: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-right-color: transparent;
+    }
+    &:after {
+        right: 0;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-left-color: transparent;
+    }
+    span {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        border-color: inherit;
+        &:before {
+            @extend %after-before;
+            background-color: $default-color;
+            border-color: $primary-color;
+            box-shadow: 0px 0px 0px 3px $default-color;
+            z-index: 1;
+            left: 50%;
+            border: 3px solid;
+            border-radius: 50%;
+            transition: all 0.5s;
+        }
+        &:first-child {
+            &:before {
+                top: 4px;
+            }
+        }
+        &:last-child {
+            &:before {
+                bottom: 4px;
+            }
+        }
+    }
+    &-small {
+        max-width: 160px;
+        font-size: 20px;
+        line-height: 36px;
+        span {
+            height: 13px;
+            &:before {
+                margin-left: -30px;
+                height: 60px;
+                width: 54px;
+            }
+            &:first-child {
+                top: -13px;
+            }
+            &:last-child {
+                bottom: -13px;
+            }
+        }
+    }
+    &-medium {
+        max-width: 200px;
+        font-size: 22px;
+        line-height: 40px;
+        span {
+            height: 15px;
+            &:before {
+                margin-left: -32px;
+                height: 60px;
+                width: 58px;
+            }
+            &:first-child {
+                top: -15px;
+            }
+            &:last-child {
+                bottom: -15px;
+            }
+        }
+    }
+    &-large {
+        max-width: 270px;
+        font-size: 26px;
+        line-height: 50px;
+        span {
+            height: 18px;
+            &:before {
+                margin-left: -40px;
+                height: 70px;
+                width: 74px;
+            }
+            &:first-child {
+                top: -18px;
+            }
+            &:last-child {
+                bottom: -18px;
+            }
+        }
+    }
     &-close {
         display: block;
         position: absolute;

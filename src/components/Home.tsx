@@ -1,6 +1,7 @@
 import * as React from "react";
-import Alerts from "./common/Alerts";
+import Alert from "./common/Alert";
 import Divider from "./common/Divider";
+import Button from "./common/Button";
 
 class Home extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -13,11 +14,14 @@ class Home extends React.Component<{}, {}> {
     render() {
         return (
             <div>
-                <Alerts type={"warning"} icon={"exclamation"} content={"Warning box"} />
-                <Alerts type={"error"} icon={"ban"} content={"Error box"} />
-                <Alerts type={"info"} icon={"info"} content={"Information box"} />
-                <Alerts type={"confirm"} icon={"check"} content={"Confirmation box"} />
+                <Alert type={"warning"} icon={"exclamation"} content={"Warning box"} />
+                <Alert type={"error"} icon={"ban"} content={"Error box"} />
+                <Alert type={"info"} icon={"info"} content={"Information box"} />
+                <Alert type={"confirm"} icon={"check"} content={"Confirmation box"} />
                 <Divider type={"divider_1"} />
+                <Button type={"large"}/>
+                <Button type={"medium"}/>
+                <Button type={"small"}/>
             </div>
         );
     }
