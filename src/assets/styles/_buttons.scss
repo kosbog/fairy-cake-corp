@@ -13,9 +13,18 @@
     border-radius: 30px;
     position: relative;
     z-index: 1;
-    transition: all 0.5s;
+    transition: background-color 0.5s;
     color: $primary-color;
     line-height: 40px;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $default-color;
+        span:before {
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
     &:before,
     &:after {
         @extend %after-before;
@@ -56,7 +65,7 @@
             left: 50%;
             border: 3px solid;
             border-radius: 50%;
-            transition: all 0.5s;
+            transition: background-color 0.5s;
         }
         &:first-child {
             &:before {

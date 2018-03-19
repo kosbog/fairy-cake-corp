@@ -17,10 +17,17 @@
         border-color: $divider-color;
     }
     img {
-        width: 75px;
+        width: 85px;
         display: block;
         margin: auto;
         padding: 0 20px;
         background: $default-color;
+        &.line ,
+        &.crossline {
+            width: 105px;
+        }
+        &.spiral {
+            width: 80px;
+        }
     }
 }
