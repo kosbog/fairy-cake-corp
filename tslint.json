@@ -57,9 +57,11 @@
         "member-access": false,
         "ordered-imports": false,
         "class-name": true,
+        "variable-name": [true, "check-format"],
         "no-consecutive-blank-lines": true,
         "no-duplicate-imports": true,
-        "no-irregular-whitespace": true
+        "no-irregular-whitespace": true,
+        "no-var-requires": false
     },
     "jsRules": {
         "max-line-length": {
