@@ -2,11 +2,12 @@ import * as React from "react";
 
 interface IProps {
     type: string;
+    size: string;
 }
 
-const Divider = ({ type }: IProps) => {
+const Button = ({ size, type }: IProps) => {
     return (
-        <a href="#" className={`btn btn-${type}`}>
+        <a href="#" className={`btn btn-${size} btn-${type}`}>
             <span></span>
             Large Button
             <span></span>
@@ -14,4 +15,4 @@ const Divider = ({ type }: IProps) => {
     );
 };
 
-export default Divider;
+export default Button;

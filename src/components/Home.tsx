@@ -26,9 +26,10 @@ class Home extends React.Component<{}, {}> {
                 <Divider type={divider1} />
                 <Divider type={divider2} />
                 <Divider type={divider3} />
-                <Button type={"large"}/>
-                <Button type={"medium"}/>
-                <Button type={"small"}/>
+                <Button size={"large"} type={"primary"}/>
+                <Button size={"large"} type={"warning"}/>
+                <Button size={"medium"} type={"info"}/>
+                <Button size={"small"} type={"error"}/>
             </div>
         );
     }
