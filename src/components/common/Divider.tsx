@@ -1,14 +1,14 @@
 import * as React from "react";
-const divider_1 = require('../../assets/images/divider_1.png');
 
 interface IProps {
     type: string;
+    imgSrc: string;
 }
 
-const Divider = ({ type }: IProps) => {
+const Divider = ({ type, imgSrc }: IProps) => {
     return (
         <div className="divider">
-            <img src={type} alt="divider" className="crossline" />
+            <img src={imgSrc} alt="divider" className={type} />
         </div>
     );
 };

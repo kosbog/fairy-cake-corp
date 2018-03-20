@@ -18,18 +18,26 @@ class Home extends React.Component<{}, {}> {
 
     render() {
         return (
-            <div>
-                <Alert type={"warning"} icon={"exclamation"} content={"Warning box"} />
-                <Alert type={"error"} icon={"ban"} content={"Error box"} />
-                <Alert type={"info"} icon={"info"} content={"Information box"} />
-                <Alert type={"confirm"} icon={"check"} content={"Confirmation box"} />
-                <Divider type={divider1} />
-                <Divider type={divider2} />
-                <Divider type={divider3} />
-                <Button size={"large"} type={"primary"}/>
-                <Button size={"large"} type={"warning"}/>
-                <Button size={"medium"} type={"info"}/>
-                <Button size={"small"} type={"error"}/>
+            <div style={{ "background-color": "#5b33ff26" }}>
+                <div>
+                    <Alert type={"warning"} icon={"exclamation"} content={"Warning box"} />
+                    <Alert type={"error"} icon={"ban"} content={"Error box"} />
+                    <Alert type={"info"} icon={"info"} content={"Information box"} />
+                    <Alert type={"confirm"} icon={"check"} content={"Confirmation box"} />
+                </div>
+                <div style={{ "text-align": "center" }}>
+                    <Button size={"large"} type={"primary"} />
+                    <Divider type={"crossline"} imgSrc={divider1} />
+                    <Button size={"large"} type={"warning"} />
+                    <Divider type={"line"} imgSrc={divider2} />
+                    <Button size={"medium"} type={"info"} />
+                    <Divider type={"spiral"} imgSrc={divider3} />
+                    <Button size={"small"} type={"error"} />
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vero, fugiat magnam aliquid accusantium recusandae eius commodi
+                        consectetur optio eum quisquam velit asperiores quasi illo unde
+                        ipsum enim exercitationem! Aperiam, similique.</p>
+                </div>
             </div>
         );
     }
