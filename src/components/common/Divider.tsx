@@ -7,8 +7,8 @@ interface IProps {
 
 const Divider = ({ type, imgSrc }: IProps) => {
     return (
-        <div className="divider">
-            <img src={imgSrc} alt="divider" className={type} />
+        <div className={`divider ${type}`}>
+            <img src={imgSrc} alt="divider" />
         </div>
     );
 };

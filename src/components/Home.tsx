@@ -3,10 +3,9 @@ import Alert from "./common/Alert";
 import Divider from "./common/Divider";
 import Button from "./common/Button";
 const divider1 = require("../assets/images/divider_1.png");
-
 const divider2 = require("../assets/images/divider_2.png");
-
 const divider3 = require("../assets/images/divider_3.png");
+const divider4 = require("../assets/images/divider_4.png");
 
 class Home extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -33,6 +32,7 @@ class Home extends React.Component<{}, {}> {
                     <Button size={"medium"} type={"info"} />
                     <Divider type={"spiral"} imgSrc={divider3} />
                     <Button size={"small"} type={"error"} />
+                    <Divider type={"title"} imgSrc={divider4} />
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Vero, fugiat magnam aliquid accusantium recusandae eius commodi
                         consectetur optio eum quisquam velit asperiores quasi illo unde
