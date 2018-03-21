@@ -1,7 +1,5 @@
-import * as React from "react";
-import Home from "./Home";
-
-interface IProps { name: string; }
+import * as React from 'react';
+import Home from './Home';
 
 class App extends React.Component<{}, {}> {
     render() {

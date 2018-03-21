@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface IProps {
     type: string;
@@ -8,7 +8,7 @@ interface IProps {
 const Divider = ({ type, imgSrc }: IProps) => {
     return (
         <div className={`divider ${type}`}>
-            <img src={imgSrc} alt="divider" />
+            <img src={imgSrc} alt='divider' />
         </div>
     );
 };

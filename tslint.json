@@ -8,9 +8,9 @@
         },
         "quotemark": [
             true,
-            "double",
+            "single",
             "avoid-escape",
-            "jsx-double"
+            "jsx-single"
         ],
         "eofline": true,
         "align": [
@@ -43,7 +43,7 @@
         ],
         "object-literal-key-quotes": [
             true,
-            "always"
+            "as-needed"
         ],
         "whitespace": [
             true,

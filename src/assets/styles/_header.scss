@@ -1,0 +1,5 @@
+header {
+    @include flex(row, nowrap, center, center);
+    background-color: $default-color;
+    width: calc(100%-80px);
+}
