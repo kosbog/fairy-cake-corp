@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface IProps {
     type: string;
@@ -7,7 +7,7 @@ interface IProps {
 
 const Button = ({ size, type }: IProps) => {
     return (
-        <a href="#" className={`btn btn-${size} btn-${type}`}>
+        <a href='#' className={`btn btn-${size} btn-${type}`}>
             <span></span>
             Large Button
             <span></span>

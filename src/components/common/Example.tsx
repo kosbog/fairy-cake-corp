@@ -17,7 +17,7 @@ class Example extends React.Component<{}, {}> {
 
     render() {
         return (
-            <div style={{ 'background-color': '#5b33ff26' }}>
+            <div>
                 <div>
                     <Alert type={'warning'} icon={'exclamation'} content={'Warning box'} />
                     <Alert type={'error'} icon={'ban'} content={'Error box'} />

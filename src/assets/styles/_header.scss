@@ -1,5 +1,7 @@
 header {
-    @include flex(row, nowrap, center, center);
+    // @include flex(column, nowrap, center, center);
     background-color: $default-color;
-    width: calc(100%-80px);
+    width: 100%;
+    z-index: 2;
 }
+@import 'nav';

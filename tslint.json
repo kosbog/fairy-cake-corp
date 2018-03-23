@@ -61,7 +61,9 @@
         "no-consecutive-blank-lines": true,
         "no-duplicate-imports": true,
         "no-irregular-whitespace": true,
-        "no-var-requires": false
+        "no-var-requires": false,
+        "no-console": false,
+        "no-debugger": false
     },
     "jsRules": {
         "max-line-length": {

@@ -1,9 +1,13 @@
 import * as React from 'react';
 import Header from './Header';
+import Section from './common/Section';
+import Wave from './common/Wave';
 
 interface IState {
     menu: any[];
 }
+
+const cakes = require('../assets/images/cakes.jpeg');
 
 class Home extends React.Component<{}, IState> {
     constructor(props: {}) {
@@ -15,8 +19,11 @@ class Home extends React.Component<{}, IState> {
 
     render() {
         return (
-            <div style={{ 'background-color': '#5b33ff26' }}>
-                <Header menuList={this.state.menu} />
+            <div className='home'>
+                <Section sectionClass='header-wrapper'>
+                    <Header navigation={this.state.menu} />
+                    <img src={cakes} alt='c' />
+                </Section>
             </div>
         );
     }

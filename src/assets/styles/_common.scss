@@ -51,6 +51,10 @@ a {
     text-decoration: none;
 }
 
+#app {
+    background-color: rgb(255, 196, 108);
+}
+
 // Mixins
 // 
 @mixin flex($direction, $wrapping, $justify, $align) {

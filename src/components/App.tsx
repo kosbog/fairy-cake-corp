@@ -4,9 +4,9 @@ import Home from './Home';
 class App extends React.Component<{}, {}> {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Home />
-            </div>
+            </React.Fragment>
         );
     }
 }

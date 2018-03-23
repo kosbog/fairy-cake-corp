@@ -1,14 +1,18 @@
 import * as React from 'react';
 import Navigation from './Navigation';
+import Wave from './common/Wave';
+
+const wave = require('../assets/images/masks/mask-menu.svg');
 
 interface IProps {
-    menuList: string[];
+    navigation: string[];
 }
 
-const Header = ({ menuList }: IProps) => {
+const Header = ({ navigation }: IProps) => {
     return (
         <header>
-            <Navigation />
+            <Navigation navigation={navigation} />
+            <Wave type='top' />
         </header>
     );
 };
