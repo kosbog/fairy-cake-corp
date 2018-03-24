@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Search from './Search';
 const logo = require('../assets/images/logo.png');
 
 interface IProps {
@@ -23,10 +24,8 @@ const Navigation = ({ navigation }: IProps) => {
 
     return (
         <nav>
-            <div className='nav-icons'>
-                <a className='nav-icons-item'>
-                    <i className='fa fa-search'></i>
-                </a>
+            <div className='nav-icons search'>
+               <Search />
             </div>
             <div className='nav-links'>
                 {menu}
