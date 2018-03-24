@@ -1,7 +1,8 @@
 import * as React from "react";
 
 interface IProps {
-    type: string;
+    size: string;
+    color: 
 }
 
 const Divider = ({ type }: IProps) => {
