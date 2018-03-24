@@ -18,8 +18,16 @@ const config = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader',
-                exclude: /node_modules/
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            babelrc: false,
+                            plugins: ['react-hot-loader/babel'],
+                        },
+                    },
+                    'awesome-typescript-loader',
+                ],
             },
             {
                 test: /\.scss?$/,
