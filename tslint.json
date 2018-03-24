@@ -8,9 +8,9 @@
         },
         "quotemark": [
             true,
-            "double",
+            "single",
             "avoid-escape",
-            "jsx-double"
+            "jsx-single"
         ],
         "eofline": true,
         "align": [
@@ -43,7 +43,7 @@
         ],
         "object-literal-key-quotes": [
             true,
-            "always"
+            "as-needed"
         ],
         "whitespace": [
             true,
@@ -65,7 +65,9 @@
         "no-consecutive-blank-lines": true,
         "no-duplicate-imports": true,
         "no-irregular-whitespace": true,
-        "no-var-requires": false
+        "no-var-requires": false,
+        "no-console": false,
+        "no-debugger": false
     },
     "jsRules": {
         "max-line-length": {

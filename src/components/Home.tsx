@@ -1,34 +1,29 @@
-import * as React from "react";
-import Alert from "./common/Alert";
-import Divider from "./common/Divider";
-import Button from "./common/Button";
-const divider1 = require("../assets/images/divider_1.png");
+import * as React from 'react';
+import Header from './Header';
+import Section from './common/Section';
+import Wave from './common/Wave';
 
-const divider2 = require("../assets/images/divider_2.png");
+interface IState {
+    menu: any[];
+}
 
-const divider3 = require("../assets/images/divider_3.png");
+const cakes = require('../assets/images/cakes.jpeg');
 
-class Home extends React.Component<{}, {}> {
+class Home extends React.Component<{}, IState> {
     constructor(props: {}) {
         super(props);
         this.state = {
-            "test": "test"
+            menu: ['Home', 'About', 'Products', 'Blog', 'Shop', 'Contacts']
         };
     }
 
     render() {
         return (
-            <div>
-                <Alert type={"warning"} icon={"exclamation"} content={"Warning box"} />
-                <Alert type={"error"} icon={"ban"} content={"Error box"} />
-                <Alert type={"info"} icon={"info"} content={"Information box"} />
-                <Alert type={"confirm"} icon={"check"} content={"Confirmation box"} />
-                <Divider type={divider1} />
-                <Divider type={divider2} />
-                <Divider type={divider3} />
-                <Button type={"large"}/>
-                <Button type={"medium"}/>
-                <Button type={"small"}/>
+            <div className='home'>
+                <Section sectionClass='header-wrapper'>
+                    <Header navigation={this.state.menu} />
+                    <img src={cakes} alt='c' />
+                </Section>
             </div>
         );
     }

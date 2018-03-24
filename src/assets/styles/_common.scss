@@ -3,7 +3,7 @@
 * {
     position: relative;
     box-sizing: border-box;
-    font-family: $primary-font;
+    font-family: $secondary-font;
 }
 
 html,
@@ -51,6 +51,10 @@ a {
     text-decoration: none;
 }
 
+#app {
+    background-color: rgb(255, 196, 108);
+}
+
 // Mixins
 // 
 @mixin flex($direction, $wrapping, $justify, $align) {
@@ -71,8 +75,11 @@ a {
     @else if $define-selector==error {
         #{$css-selector}: $error-color;
     }
-    @else {
+    @else if $define-selector==confirm {
         #{$css-selector}: $confirm-color;
+    }
+    @else {
+        #{$css-selector}: $primary-color;
     }
 }
 

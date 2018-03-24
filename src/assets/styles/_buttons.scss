@@ -7,24 +7,16 @@
     border: 0;
     display: inline-block;
     font-weight: 500;
+    font-family: $primary-font;
     text-align: center;
     letter-spacing: 1px;
     white-space: nowrap;
     border-radius: 30px;
     position: relative;
     z-index: 1;
-    transition: background-color 0.5s;
+    transition: color 0.5s;
     color: $primary-color;
     line-height: 40px;
-    &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: $default-color;
-        span:before {
-            border-color: $primary-color;
-            background-color: $primary-color;
-        }
-    }
     &:before,
     &:after {
         @extend %after-before;
@@ -65,7 +57,6 @@
             left: 50%;
             border: 3px solid;
             border-radius: 50%;
-            transition: background-color 0.5s;
         }
         &:first-child {
             &:before {
@@ -172,6 +163,28 @@
             opacity: .6;
             transform: rotate( 180deg);
             transition: all .3s;
+        }
+    }
+    @each $selector in warning,
+    info,
+    confirm,
+    error,
+    primary {
+        &.btn-#{$selector} {
+            @include defineColor(#{$selector}, 'color');
+            &:hover {
+                @each $rule in 'background-color',
+                'border-color' {
+                    @include defineColor(#{$selector}, #{$rule});
+                }
+                color: $default-color;
+                span:before {
+                    @each $rule in 'background-color',
+                    'border-color' {
+                        @include defineColor(#{$selector}, #{$rule});
+                    }
+                }
+            }
         }
     }
 }

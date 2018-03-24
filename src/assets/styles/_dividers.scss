@@ -17,17 +17,29 @@
         border-color: $divider-color;
     }
     img {
-        width: 85px;
-        display: block;
         margin: auto;
         padding: 0 20px;
         background: $default-color;
-        &.line ,
-        &.crossline {
+    }
+    &.line,
+    &.crossline {
+        img {
             width: 105px;
         }
-        &.spiral {
+    }
+    &.spiral {
+        img {
             width: 80px;
+        }
+    }
+    &.title {
+        img {
+            width: 225px;
+            background-color: transparent;
+        }
+        &:before {
+            @extend %after-before;
+            border: 0;
         }
     }
 }
