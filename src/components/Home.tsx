@@ -24,6 +24,8 @@ class Home extends React.Component<{}, IState> {
                     <Header navigation={this.state.menu} />
                     <img src={cakes} alt='c' />
                 </Section>
+                <Section sectionClass='header-wrapper'>
+                </Section>
             </div>
         );
     }

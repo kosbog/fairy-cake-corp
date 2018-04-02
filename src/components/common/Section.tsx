@@ -6,7 +6,6 @@ interface IProps {
 }
 
 const Section = (props: IProps) => {
-    console.log(props);
     return (
         <section className={props.sectionClass}>
             {props.children}

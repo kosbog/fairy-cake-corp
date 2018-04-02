@@ -25,7 +25,7 @@ const Navigation = ({ navigation }: IProps) => {
     return (
         <nav>
             <div className='nav-icons search'>
-               <Search />
+               {/* <Search /> */}
             </div>
             <div className='nav-links'>
                 {menu}
