@@ -56,6 +56,11 @@ a {
     background-color: rgb(255, 196, 108);
 }
 
+.page {
+    background-color: $default-color;
+    width: 100%;
+}
+
 // Mixins
 // 
 @mixin flex($direction, $wrapping, $justify, $align) {

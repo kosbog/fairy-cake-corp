@@ -2,11 +2,25 @@ import * as React from 'react';
 import Search from './Search';
 const logo = require('../assets/images/logo.png');
 
-interface IProps {
+interface INavProps {
     navigation: string[];
 }
 
-const Navigation = ({ navigation }: IProps) => {
+interface INavIconProps {
+    children: object;
+    type: string;
+}
+
+const NavigationIcons = (props: INavIconProps) => {
+    const { type } = props;
+    return (
+        <div className={`nav-icons ${type}`}>
+            {props.children}
+        </div>
+    );
+};
+
+const Navigation = ({ navigation }: INavProps) => {
     navigation.splice(3, 0, logo);
     const menu = navigation.map((item, index) => {
         if (index === 3) {
@@ -24,13 +38,13 @@ const Navigation = ({ navigation }: IProps) => {
 
     return (
         <nav>
-            <div className='nav-icons search'>
-               {/* <Search /> */}
-            </div>
+            <NavigationIcons type='search'>
+                {/* <Search /> */}
+            </NavigationIcons>
             <div className='nav-links'>
                 {menu}
             </div>
-            <div className='nav-icons'>
+            <NavigationIcons type=''>
                 <a className='nav-icons-item'>
                     <i className='fa fa-shopping-basket'></i>
                 </a>
@@ -40,7 +54,7 @@ const Navigation = ({ navigation }: IProps) => {
                 <a className='nav-icons-item'>
                     <i className='fa fa-sign-in-alt'></i>
                 </a>
-            </div>
+            </NavigationIcons>
         </nav>
     );
 };

@@ -22,9 +22,13 @@ class Home extends React.Component<{}, IState> {
             <div className='home'>
                 <Section sectionClass='header-wrapper'>
                     <Header navigation={this.state.menu} />
-                    <img src={cakes} alt='c' />
+                    <Section sectionClass='banner-wrapper'>
+                        <img src={cakes} alt='c' />
+                    </Section>
                 </Section>
-                <Section sectionClass='header-wrapper'>
+                <Section sectionClass='page'>
+                    <Wave type='bottom' />
+                    {/*  */}
                 </Section>
             </div>
         );
