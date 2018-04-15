@@ -4,13 +4,17 @@ nav {
     margin: 0 auto;
     .nav {
         &-links {
-            @include flex(row, nowrap, center, center);
+            @include flex(row, nowrap, flex-start, center);
             color: $primary-color;
+            width: 35%;
+            &:nth-child(2) {
+                justify-content: flex-end;
+            }
             &-item {
                 font-family: $primary-font;
                 font-size: $primary-fs + 2px;
                 line-height: 36px;
-                margin: 0 25px;
+                margin: 0 22px;
                 &:after {
                     @extend %after-before;
                     z-index: 1;
@@ -36,7 +40,7 @@ nav {
             }
         }
         &-icons {
-            width: 150px;
+            width: 10%;
             @include flex(row, nowrap, flex-end, center);
             &-item {
                 margin: 0 15px;
@@ -50,8 +54,8 @@ nav {
         }
     }
     .logo {
-        width: 100%;
-        max-width: 180px;
+        width: 10%;
+        // max-width: 180px;
         height: 100px;
         img {
             width: 100%;

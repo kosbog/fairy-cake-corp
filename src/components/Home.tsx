@@ -2,6 +2,8 @@ import * as React from 'react';
 import Header from './Header';
 import Section from './common/Section';
 import Wave from './common/Wave';
+import BannerLogo from './BannerLogo';
+import SpecialProducts from './SpecialProducts';
 
 interface IState {
     menu: any[];
@@ -24,12 +26,13 @@ class Home extends React.Component<{}, IState> {
                     <Header navigation={this.state.menu} />
                     <Section sectionClass='banner-wrapper'>
                         <img src={cakes} alt='c' />
+                        <BannerLogo />
                     </Section>
                 </Section>
-                <Section sectionClass='page'>
-                    <Wave type='bottom' />
-                    {/*  */}
-                </Section>
+                <div className='page'>
+                    {/* <Wave type='bottom' /> */}
+                    <SpecialProducts products={[]} />
+                </div>
             </div>
         );
     }

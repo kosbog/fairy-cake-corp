@@ -21,28 +21,26 @@ const NavigationIcons = (props: INavIconProps) => {
 };
 
 const Navigation = ({ navigation }: INavProps) => {
-    navigation.splice(3, 0, logo);
     const menu = navigation.map((item, index) => {
-        if (index === 3) {
-            return (
-                <a href='/' className='logo' key='logo'>
-                    <img src={item} alt='logo' />
-                </a>
-            );
-        } else {
-            return (
-                <a key={item} className='nav-links-item'>{item}</a>
-            );
-        }
+        return (
+            <a key={item} className='nav-links-item'>{item}</a>
+        );
     });
 
+    // TODO: refacotr render method!
     return (
         <nav>
             <NavigationIcons type='search'>
                 {/* <Search /> */}
             </NavigationIcons>
             <div className='nav-links'>
-                {menu}
+                {menu.filter((i, index) => index < 3)}
+            </div>
+            <a href='/' className='logo' key='logo'>
+                <img src={logo} alt='logo' />
+            </a>
+            <div className='nav-links'>
+                {menu.filter((i, index) => index > 2)}
             </div>
             <NavigationIcons type=''>
                 <a className='nav-icons-item'>
