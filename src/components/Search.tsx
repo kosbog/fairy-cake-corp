@@ -9,6 +9,6 @@ const Search = () => {
             <input type='search' name='' id='' placeholder='Muffin'/>
         </React.Fragment>
     );
-}
+};
 
 export default Search;

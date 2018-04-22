@@ -66,6 +66,13 @@ a {
     -webkit-mask-size: 106%;
     -webkit-mask-repeat: no-repeat;
     margin-top: -16px;
+    color: $primary-color;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 // Mixins

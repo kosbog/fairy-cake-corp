@@ -3,7 +3,7 @@ import Header from './Header';
 import Section from './common/Section';
 import Wave from './common/Wave';
 import BannerLogo from './BannerLogo';
-import SpecialProducts from './SpecialProducts';
+import SpecialProducts from './Products.Special';
 
 interface IState {
     menu: any[];
@@ -31,7 +31,9 @@ class Home extends React.Component<{}, IState> {
                 </Section>
                 <div className='page'>
                     {/* <Wave type='bottom' /> */}
-                    <SpecialProducts products={[]} />
+                    {/* <div className='page-wrapper'> */}
+                        <SpecialProducts products={[]} />
+                    {/* </div> */}
                 </div>
             </div>
         );
