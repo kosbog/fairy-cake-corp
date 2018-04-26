@@ -1,6 +1,17 @@
 // ABeeZee, Merienda One
-@import url('https://fonts.googleapis.com/css?family=ABeeZee|Merienda+One|Leckerli+One');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Leckerli+One');
 
-// font-family: 'Merienda One', cursive;
+@font-face {
+    font-family: "Merienda One";
+    src: url("../fonts/Merienda-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Merienda One Bold";
+    src: url("../fonts/Merienda-Bold.ttf") format("truetype")
+}
+
+// font-family: 'Merienda One';
+// font-family: 'Merienda One Bold';
 // font-family: 'ABeeZee', sans-serif;
 // font-family: 'Leckerli One', cursive;

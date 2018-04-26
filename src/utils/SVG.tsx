@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 interface ISVG {
-    name: string;
-    style: object;
+    name?: string;
+    style?: object;
 }
 
 const icons = {
@@ -23,7 +23,7 @@ const icons = {
                 c6.7-3.9,15.1-6.1,24-8.5c13.1-3.5,26.8-7.1,36.4-16.8c9.5-9.5,13.1-23,16.6-36c2.4-9,4.6-17.5,8.7-24.4c3.8-6.5,9.8-12.5,16.2-18.9&#10;&#9;&#9;&#9;
                 c9.8-9.7,19.9-19.7,23.6-33.3C495.7,301.4,494.4,287.7,488.5,274.5z'/>
             </svg>
-        )
+        );
     }
 };
 
@@ -34,7 +34,7 @@ class SVG extends React.Component<ISVG, {}> {
 
     render() {
         return (
-           {icons[this.props.name]()}
+          'kkk'
         );
     }
 }

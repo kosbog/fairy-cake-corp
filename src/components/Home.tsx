@@ -4,6 +4,8 @@ import Section from './common/Section';
 import Wave from './common/Wave';
 import BannerLogo from './BannerLogo';
 import SpecialProducts from './Products.Special';
+import MagicProcess from '../components/Magic.Process';
+import Portfolio from './Portfolio';
 
 interface IState {
     menu: any[];
@@ -30,10 +32,9 @@ class Home extends React.Component<{}, IState> {
                     </Section>
                 </Section>
                 <div className='page'>
-                    {/* <Wave type='bottom' /> */}
-                    {/* <div className='page-wrapper'> */}
                         <SpecialProducts products={[]} />
-                    {/* </div> */}
+                        <MagicProcess />
+                        <Portfolio />
                 </div>
             </div>
         );
