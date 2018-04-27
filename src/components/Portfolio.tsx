@@ -21,7 +21,7 @@ const PortfolioItem = ({ product }: IPortfolioItem) => {
         <div className='portfolio-item'>
             <img src={product} alt='item'/>
             <div className='portfolio-item-info'>
-                {/* <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='79 -202.7 1000 1000'>
+                <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='79 -202.7 1000 1000'>
                     <path d='M5459-1110.4L579.1-202.7c10.7,0,21.6,1.5,32.5,4.4c22.3,6,41.3,17,58,26.6c11.9,6.9,23,13.3,31.1,15.5
                         c6.8,1.8,19.4,1.8,26.2,1.8h12.9c27.5,0,59.4,1.4,89.3,18.7c32.8,19,50.2,49.3,64.1,73.7c6.2,10.9,12.6,22.1,17.8,27.3
                         c5.9,5.9,17.1,12.3,28.9,19.1c24,13.8,53.8,31,72.2,63c18.6,32.3,18.5,67,18.4,94.8c0,13.5-0.1,26.1,2,33.7
@@ -49,7 +49,7 @@ const PortfolioItem = ({ product }: IPortfolioItem) => {
                         c10.3-17.8,20.9-36.1,20.9-56.6c0-20.8-10.7-39.2-21.1-57.1c-7-12.1-13.6-23.5-16.7-35c-3.1-11.5-3-24.7-3-38.7
                         C919.5,146.2,919.5,124.8,909.2,106.8z'>
                     </path>
-                </svg> */}
+                </svg>
                 <p>
                     Lorem ipsum dolor
                 </p>
