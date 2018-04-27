@@ -7,7 +7,7 @@ const hart = require('../assets/images/asset15.png');
 const MagicProess = () => {
     return (
         <Section sectionClass='magic-process'>
-            <div className='mask-overlay'></div>
+            <div className='mask-overlay'>
             <div className='magic-process-wrapper'>
                 <div className='magic-process-image'>
                     <svg x='0px' y='0px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'>
@@ -35,6 +35,7 @@ const MagicProess = () => {
                 </div>
                 {/* TODO: create another style of Button */}
                 <Button size={'large'} type={'primary'} />
+            </div>
             </div>
         </Section>
     );

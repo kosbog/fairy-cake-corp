@@ -14,7 +14,7 @@
     border-radius: 30px;
     position: relative;
     z-index: 1;
-    transition: color 0.5s;
+    transition: color 1s;
     color: $primary-color;
     line-height: 40px;
     &:before,
@@ -136,7 +136,7 @@
         height: 24px;
         border-radius: 50%;
         background: #c1bfbf;
-        transition: all .3s;
+        transition: all 1s;
         &:before,
         &:after {
             @extend %after-before;
@@ -162,7 +162,7 @@
         &:hover {
             opacity: .6;
             transform: rotate( 180deg);
-            transition: all .3s;
+            transition: color 1s;
         }
     }
     @each $selector in warning,

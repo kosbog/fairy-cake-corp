@@ -6,6 +6,9 @@ import BannerLogo from './BannerLogo';
 import SpecialProducts from './Products.Special';
 import MagicProcess from '../components/Magic.Process';
 import Portfolio from './Portfolio';
+import KnowUs from './KnowUs';
+import Testimonial from './Testimonial';
+import Prices from './Prices';
 
 interface IState {
     menu: any[];
@@ -35,6 +38,9 @@ class Home extends React.Component<{}, IState> {
                         <SpecialProducts products={[]} />
                         <MagicProcess />
                         <Portfolio />
+                        <KnowUs />
+                        <Prices />
+                        <Testimonial />
                 </div>
             </div>
         );

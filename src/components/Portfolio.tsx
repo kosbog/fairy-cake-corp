@@ -1,5 +1,8 @@
 import * as React from 'react';
 import Section from './common/Section';
+import Divider from './common/Divider';
+
+const divider = require('../assets/images/dividers/divider_4.png');
 
 const cakes = [
     require('../assets/images/products/asset16.jpeg'),
@@ -55,8 +58,8 @@ const PortfolioItem = ({ product }: IPortfolioItem) => {
                 </p>
             </div>
         </div>
-    )
-}
+    );
+};
 
 class Portfolio extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -70,14 +73,18 @@ class Portfolio extends React.Component<{}, {}> {
                     <PortfolioItem product={item} key={index} />
                 );
             })
-        )
+        );
     }
 
     render() {
         return (
             <Section sectionClass='portfolio'>
-                <div className='portfolio-wrapper'>
+                <div className=' portfolio-wrapper'>
+                    <Divider type={'title'} imgSrc={divider} />
+                    <h2>Our Creations</h2>
+                    <div className='portfolio-grid'>
                         {this.renderGrid()}
+                    </div>
                 </div>
             </Section>
         );
