@@ -14,7 +14,7 @@
     border-radius: 30px;
     position: relative;
     z-index: 1;
-    transition: color 1s;
+    transition: color .3s;
     color: $primary-color;
     line-height: 40px;
     &:before,

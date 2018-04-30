@@ -3,7 +3,7 @@ import * as React from 'react';
 const bannerLogo = require('../assets/images/backgrounds/banner_logo_bg.png');
 const bannerDivider = require('../assets/images/dividers/divider_6.png');
 
-const BannerLogo = () => {
+const Banner = () => {
     return (
         <div className='banner-logo'>
             {/* <img src={bannerDivider} alt='banner-divider' /> */}
@@ -22,4 +22,4 @@ const BannerLogo = () => {
     );
 };
 
-export default BannerLogo;
+export default Banner;
