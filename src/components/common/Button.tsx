@@ -3,7 +3,7 @@ import * as React from 'react';
 interface IProps {
     type: string;
     size: string;
-    text: string;
+    text?: string;
 }
 
 const Button = ({ size, type, text }: IProps) => {

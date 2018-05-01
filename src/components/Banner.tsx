@@ -3,7 +3,11 @@ import * as React from 'react';
 const bannerLogo = require('../assets/images/backgrounds/banner_logo_bg.png');
 const bannerDivider = require('../assets/images/dividers/divider_6.png');
 
-const Banner = () => {
+interface IBanner {
+    test?: string;
+}
+
+const Banner: React.StatelessComponent<IBanner> = ({ children, test }) => {
     return (
         <div className='banner-logo'>
             {/* <img src={bannerDivider} alt='banner-divider' /> */}
@@ -18,6 +22,7 @@ const Banner = () => {
                     flavoured bite-size pastries and cakes
                 </p>
             </div>
+            {children}
         </div>
     );
 };

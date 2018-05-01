@@ -34,7 +34,7 @@ class Home extends React.Component<{}, IState> {
                     <Section sectionClass='banner'>
                         <div className='banner-wrapper'>
                             <img src={cakes} alt='c' />
-                            <Banner />
+                            <Banner test='test'>TEST!!!!!</Banner>
                         </div>
                     </Section>
                 </Section>
