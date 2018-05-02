@@ -31,12 +31,9 @@ class Home extends React.Component<{}, IState> {
             <div className='home'>
                 <Section sectionClass='header-wrapper'>
                     <Header navigation={this.state.menu} />
-                    <Section sectionClass='banner'>
-                        <div className='banner-wrapper'>
-                            <img src={cakes} alt='c' />
-                            <Banner test='test'>TEST!!!!!</Banner>
-                        </div>
-                    </Section>
+                    <Banner>
+                        <img src={cakes} alt='c' />
+                    </Banner>
                 </Section>
                 <div className='page'>
                     <SpecialProducts products={[]} />

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Section from './common/Section';
 
 const bannerLogo = require('../assets/images/backgrounds/banner_logo_bg.png');
 const bannerDivider = require('../assets/images/dividers/divider_6.png');
@@ -9,21 +10,25 @@ interface IBanner {
 
 const Banner: React.StatelessComponent<IBanner> = ({ children, test }) => {
     return (
-        <div className='banner-logo'>
-            {/* <img src={bannerDivider} alt='banner-divider' /> */}
-            <div className='banner-img'>
-                <img src={bannerLogo} alt='banner-logo' />
+        <Section sectionClass='banner'>
+            <div className='banner-wrapper'>
+                {children}
+                <div className='banner-logo'>
+                    <div className='banner-img'>
+                        <img src={bannerLogo} alt='banner-logo' />
+                    </div>
+                    <div className='banner-text'>
+                        <p className='title'>Welcome to <br />
+                            Fairy Cake
+                        </p>
+                        <p className='description'>
+                            We offer now a great range of different <br />
+                            flavoured bite-size pastries and cakes
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className='banner-text'>
-                <p className='title'>Welcome to <br />
-                    Fairy Cake</p>
-                <p className='description'>
-                    We offer now a great range of different <br />
-                    flavoured bite-size pastries and cakes
-                </p>
-            </div>
-            {children}
-        </div>
+        </Section>
     );
 };
 

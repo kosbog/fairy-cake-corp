@@ -44,13 +44,13 @@ const Navigation = ({ navigation }: INavProps) => {
             </div>
             <NavigationIcons type=''>
                 <a className='nav-icons-item'>
-                    <i className='fa fa-shopping-basket'></i>
+                    <i className='flaticon-people'></i>
                 </a>
                 <a className='nav-icons-item'>
-                    <i className='fa fa-user'></i>
+                    <i className='flaticon-shop'></i>
                 </a>
                 <a className='nav-icons-item'>
-                    <i className='fa fa-sign-in-alt'></i>
+                    <i className='flaticon-login'></i>
                 </a>
             </NavigationIcons>
         </nav>
