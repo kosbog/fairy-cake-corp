@@ -6,6 +6,7 @@
                 180
             ]
         },
+        "member-ordering": false,
         "quotemark": [
             true,
             "single",

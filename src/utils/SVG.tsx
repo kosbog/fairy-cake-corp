@@ -32,9 +32,11 @@ class SVG extends React.Component<ISVG, {}> {
         super(props);
     }
 
+    // this.props.name - is a name of icon (for example - "test")
+
     render() {
         return (
-          'kkk'
+          {icons[this.props.name]()}
         );
     }
 }
