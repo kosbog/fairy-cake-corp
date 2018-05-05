@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Section from './common/Section';
 import Divider from './common/Divider';
+import SVG from '../utils/SVG';
 
 const divider = require('../assets/images/dividers/divider_4.png');
 
@@ -81,6 +82,7 @@ class Portfolio extends React.Component<{}, {}> {
             <Section sectionClass='portfolio'>
                 <div className=' portfolio-wrapper'>
                     <Divider type={'title'} imgSrc={divider} />
+                    <SVG name='test' />
                     <h2>Our Creations</h2>
                     <div className='portfolio-grid'>
                         {this.renderGrid()}
