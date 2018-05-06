@@ -39,6 +39,10 @@
             }
             svg {
                 width: 65px;
+                fill: $default-color;
+                &:nth-last-of-type(1) {
+                    transform: rotateY(-180deg);
+                }
             }
         }
         &-text {

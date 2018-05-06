@@ -6,9 +6,10 @@ const bannerDivider = require('../assets/images/dividers/divider_6.png');
 
 interface IBanner {
     test?: string;
+    children?: React.ReactNode;
 }
 
-const Banner: React.StatelessComponent<IBanner> = ({ children, test }) => {
+const Banner = ({ children, test }: IBanner) => {
     return (
         <Section sectionClass='banner'>
             <div className='banner-wrapper'>
