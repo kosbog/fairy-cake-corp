@@ -21,9 +21,6 @@
             background-color: rgba(75, 67, 66, 0.9);
         }
         h3 {
-            font-size: 28px;
-            font-family: $primary-font;
-            font-weight: normal;
             margin-bottom: 10px;
             &:before {
                 @extend %after-before;
@@ -50,7 +47,7 @@
     }
     &-logo {
         img {
-            width: 100%;
+            width: 90%;
             max-width: 300px;
             margin-top: -20px;
         }

@@ -7,12 +7,6 @@
         background-image: url('../images/backgrounds/asset41.jpeg');
         background-size: cover;
         background-position: center;
-        h2 {
-            font-size: 48px;
-            font-family: $primary-bold-font;
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
     }
     &-grid {
         @extend .wrapper;

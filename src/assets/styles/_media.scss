@@ -1,10 +1,44 @@
-@media screen and (max-width: 768) {
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 40px;
+    }
     .msg {
         &-box {}
         &-content {
-            
             &_title {
                 // font-size: 20px;
+            }
+        }
+    }
+    .banner {
+        &-text {
+            .description {
+                display: none;
+            }
+        }
+    }
+    .products {
+        &-special {
+            .slider {
+                flex-direction: column;
+                &-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .knowus {
+        &-item {
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+    .footer {
+        &-grid {
+            flex-direction: column;
+            div {
+                width: 100%;
+                margin: 20px 0;
             }
         }
     }

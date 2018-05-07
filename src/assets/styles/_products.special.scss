@@ -15,13 +15,8 @@
             width: 100%;
             height: 100%;
             background-color: rgba(255, 255, 255, 0.8);
-        } // TODO: set to common rule for "h2"
-        h2 {
-            font-size: 48px;
-            font-family: $primary-bold-font;
-            font-weight: normal;
-            margin-bottom: 30px;
-        } // TODO: set to common rule for "slider"
+        }
+         // TODO: set to common rule for "slider"
         .slider {
             @include flex(row,
             nowrap,
@@ -29,6 +24,8 @@
             center);
             &-item {
                 width: 25%;
+                // min-width: 200px;
+                margin-bottom: 20px;
                 @include flex(column,
                 nowrap,
                 center,
@@ -54,8 +51,6 @@
                 }
                 &-text {
                     h3 {
-                        font-family: $primary-font;
-                        font-size: 30px;
                         margin-bottom: 15px;
                     }
                     p {

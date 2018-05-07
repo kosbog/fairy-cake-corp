@@ -25,7 +25,7 @@
         svg {
             stroke-width: 12px;
             fill: transparent;
-            stroke: #ffffff;
+            stroke: $default-color;
         }
     }
     &-text {
@@ -33,12 +33,10 @@
         margin-bottom: 30px; // TODO: set to common rule for "h2"
         h2 {
             font-family: $primary-font;
-            font-size: 63px;
-            color: #ffffff;
-            margin-bottom: 40px;
+            color: $default-color;
         }
         p {
-            color: #ffffff;
+            color: $default-color;
             line-height: 25px;
         }
     }
@@ -48,7 +46,7 @@
     padding: 70px 0 170px;
     background-image: url('../images/backgrounds/asset39.jpeg');
     background-size: cover;
-    background-color: #fff;
+    background-color: $default-color;
     -webkit-mask-position: bottom;
     -webkit-mask-size: cover;
     -webkit-mask-repeat: no-repeat;
