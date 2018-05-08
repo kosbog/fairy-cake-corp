@@ -2,6 +2,7 @@ import * as React from 'react';
 import Section from './common/Section';
 import Divider from './common/Divider';
 import SVG from '../utils/SVG';
+import Slider from './Slider';
 
 const divider = require('../assets/images/dividers/divider_4.png');
 
@@ -24,7 +25,7 @@ const SpecialProducts = ({ products }: IProps) => {
                 <h2>Our Specialties</h2>
 
                 {/* TODO: create slider */}
-                <div className='slider products-special-slider'>
+                {/* <div className='slider products-special-slider'>
                     {cakes.map((item, index) => {
                         return (
                             <div className='slider-item' key={index}>
@@ -39,7 +40,8 @@ const SpecialProducts = ({ products }: IProps) => {
                             </div>
                         );
                     })}
-                </div>
+                </div> */}
+                <Slider classes='products-special-slider' />
 
             </div>
         </Section>
