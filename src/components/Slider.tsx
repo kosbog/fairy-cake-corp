@@ -66,9 +66,11 @@ class Slider extends React.Component<any, any> {
     render() {
         return (
             <div className={`slider ${this.props.classes}`}>
-                    {cakes.map((item, index) => {
-                        return <SliderItem item={item} key={index} />
-                    })}
+                    <div className="slider-wrapper">
+                        {cakes.map((item, index) => {
+                            return <SliderItem item={item} key={index} />
+                        })}
+                    </div>
 
                     {/* <RightArrow nextSlide={this.nextSlide} />
                 <LeftArrow previousSlide={this.previousSlide} /> */}

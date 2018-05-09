@@ -23,26 +23,7 @@ const SpecialProducts = ({ products }: IProps) => {
             <div className='products-wrapper'>
                 <Divider type={'title'} imgSrc={divider} />
                 <h2>Our Specialties</h2>
-
-                {/* TODO: create slider */}
-                {/* <div className='slider products-special-slider'>
-                    {cakes.map((item, index) => {
-                        return (
-                            <div className='slider-item' key={index}>
-                                <div className='slider-item-image'>
-                                    <SVG icon='patternFull' />
-                                    <img src={item} alt='Specialties' />
-                                </div>
-                                <div className='slider-item-text'>
-                                    <h3>Occasion Cakes</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div> */}
                 <Slider classes='products-special-slider' />
-
             </div>
         </Section>
     );

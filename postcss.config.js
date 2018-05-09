@@ -2,7 +2,7 @@ module.exports = {
     plugins: {
         'autoprefixer': {
             browsers: [
-                "> 1%",
+                "> 0.2%",
                 "last 5 versions",
                 "Firefox ESR",
                 "not ie < 10"
